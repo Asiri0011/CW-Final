@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ActNow SDG - Sitemap</title>
+  <link rel="stylesheet" href="css/global.css">
+  <script src="js/global.js"></script>
+
+  <style>
+    /* ===== SITEMAP PAGE ===== */
+    .sitemap-section {
+      padding: 0px 20px;
+      text-align: center;
+    }
+
+    .sitemap-section h1 {
+      margin-bottom: 12px;
+      font-size: 2rem;
+      color: #1d3557;
+    }
+
+    .sitemap-section p {
+      max-width: 750px;
+      margin: 0 auto 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .sitemap-wrapper {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px 30px 30px;
+      overflow-x: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .sitemap-svg {
+      width: 100%;
+      height: auto;
+      min-width: 780px;
+    }
+
+    /* ===== SVG STYLES ===== */
+    .line {
+      stroke: #a8b8cc;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .node:hover rect {
+      opacity: 0.9;
+      cursor: pointer;
+      transition: 0.3s ease;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .node text {
+      font-size: 14px;
+      font-weight: 600;
+      pointer-events: none;
+    }
+
+    /* Amber: Splash */
+    .node-amber rect {
+      fill: #f6d7a8;
+      stroke: #e2b96d;
+      stroke-width: 2;
+    }
+    .node-amber text {
+      fill: #6b4b1f;
+    }
+
+    /* Blue: Home */
+    .node-blue rect {
+      fill: #cfe8ff;
+      stroke: #7bb7f0;
+      stroke-width: 2;
+    }
+    .node-blue text {
+      fill: #1d4f7a;
+    }
+
+    /* Teal: Navigation */
+    .node-teal rect {
+      fill: #c9f1ea;
+      stroke: #72cfc0;
+      stroke-width: 2;
+    }
+    .node-teal text {
+      fill: #145c52;
+    }
+
+    /* Gray: Utility */
+    .node-gray rect {
+      fill: #e5eaf1;
+      stroke: #b7c2cf;
+      stroke-width: 2;
+    }
+    .node-gray text {
+      fill: #374151;
+    }
+
+    /* Green: Content */
+    .node-green rect {
+      fill: #d7f5d9;
+      stroke: #86d58d;
+      stroke-width: 2;
+    }
+    .node-green text {
+      fill: #1f5d2a;
+    }
+
+    /* Purple: Editor tools */
+    .node-purple rect {
+      fill: #e3dbff;
+      stroke: #b39cf5;
+      stroke-width: 2;
+    }
+    .node-purple text {
+      fill: #4a3485;
+    }
+
+    /* Row labels */
+    .row-label {
+      font-size: 11px;
+      fill: #7a7a7a;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+
+<body class="page-home">
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Go to Home">
+        <img src="/img/logo/logo.png" alt="ActNow SDG logo">
+        <span class="brand-title">ActNow SDG</span>
+      </a>
+
+      <button
+        class="menu-button"
+        onclick="document.getElementById('site-nav').style.display = 'flex'"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="ais.html">AIS</a>
+        <a class="nav-link" href="feedback.html">Feedback</a>
+        <a class="nav-link" href="team.html">Team</a>
+        <a class="nav-link" href="profile.html">Profile</a>
+        <a class="nav-link active" href="sitemap.html">Sitemap</a>
+
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'none'"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container site-main">
+    <section class="topic">
+      <div class="topic-content">
+        <h1>Site Map</h1>
+      </div>
+    </section>
+
+    <section class="sitemap-section">
+      <h2>Explore the SmartEdu Page Layout</h2>
+      <p>
+        This sitemap visually represents the structure of the SmartEdu website
+        and the relationship between all key pages.
+      </p>
+
+      <div class="sitemap-wrapper">
+        <svg class="sitemap-svg" viewBox="0 0 780 580" aria-label="SmartEdu website sitemap">
+          <title>SmartEdu Website Sitemap</title>
+
+          <!-- CONNECTOR LINES -->
+
+          <!-- Splash to Home -->
+          <line class="line" x1="390" y1="72" x2="390" y2="112"/>
+
+          <!-- Home to Row 1 -->
+          <line class="line" x1="390" y1="156" x2="390" y2="196"/>
+          <line class="line" x1="100" y1="196" x2="680" y2="196"/>
+          <line class="line" x1="100" y1="196" x2="100" y2="224"/>
+          <line class="line" x1="270" y1="196" x2="270" y2="224"/>
+          <line class="line" x1="510" y1="196" x2="510" y2="224"/>
+          <line class="line" x1="680" y1="196" x2="680" y2="224"/>
+
+          <!-- Home to Row 2 -->
+          <line class="line" x1="390" y1="156" x2="390" y2="304"/>
+          <line class="line" x1="100" y1="304" x2="680" y2="304"/>
+          <line class="line" x1="100" y1="304" x2="100" y2="332"/>
+          <line class="line" x1="270" y1="304" x2="270" y2="332"/>
+          <line class="line" x1="510" y1="304" x2="510" y2="332"/>
+          <line class="line" x1="680" y1="304" x2="680" y2="332"/>
+
+          <!-- Home to Row 3 -->
+          <line class="line" x1="390" y1="156" x2="390" y2="412"/>
+          <line class="line" x1="100" y1="412" x2="680" y2="412"/>
+          <line class="line" x1="100" y1="412" x2="100" y2="440"/>
+          <line class="line" x1="270" y1="412" x2="270" y2="440"/>
+          <line class="line" x1="510" y1="412" x2="510" y2="440"/>
+          <line class="line" x1="680" y1="412" x2="680" y2="440"/>
+
+          <!-- ROW LABELS -->
+          <text class="row-label" x="46" y="254" text-anchor="middle"
+                transform="rotate(-90,46,254)">Nav pages</text>
+          <text class="row-label" x="46" y="362" text-anchor="middle"
+                transform="rotate(-90,46,362)">Sub pages</text>
+          <text class="row-label" x="46" y="468" text-anchor="middle"
+                transform="rotate(-90,46,468)">ST content</text>
+
+          <!-- SPLASH -->
+          <a href="splash.html">
+            <g class="node node-amber" tabindex="0">
+              <title>Splash Screen</title>
+              <rect x="280" y="32" width="220" height="40" rx="12"/>
+              <text x="390" y="52" text-anchor="middle" dominant-baseline="central">Splash Screen</text>
+            </g>
+          </a>
+
+          <!-- HOME -->
+          <a href="/">
+            <g class="node node-blue" tabindex="0">
+              <title>Home Page</title>
+              <rect x="270" y="112" width="240" height="44" rx="12"/>
+              <text x="390" y="134" text-anchor="middle" dominant-baseline="central">Home Page</text>
+            </g>
+          </a>
+
+          <!-- ROW 1 -->
+          <a href="gallery.html">
+            <g class="node node-teal" tabindex="0">
+              <title>Gallery Page</title>
+              <rect x="56" y="224" width="88" height="40" rx="12"/>
+              <text x="100" y="244" text-anchor="middle" dominant-baseline="central">Gallery</text>
+            </g>
+          </a>
+
+          <a href="ais.html">
+            <g class="node node-teal" tabindex="0">
+              <title>AIS Page</title>
+              <rect x="226" y="224" width="88" height="40" rx="12"/>
+              <text x="270" y="244" text-anchor="middle" dominant-baseline="central">AIS</text>
+            </g>
+          </a>
+
+          <a href="feedback.html">
+            <g class="node node-teal" tabindex="0">
+              <title>Feedback Page</title>
+              <rect x="460" y="224" width="100" height="40" rx="12"/>
+              <text x="510" y="244" text-anchor="middle" dominant-baseline="central">Feedback</text>
+            </g>
+          </a>
+
+          <a href="team.html">
+            <g class="node node-teal" tabindex="0">
+              <title>Team Page</title>
+              <rect x="636" y="224" width="88" height="40" rx="12"/>
+              <text x="680" y="244" text-anchor="middle" dominant-baseline="central">Team</text>
+            </g>
+          </a>
+
+          <!-- ROW 2 -->
+          <a href="profile.html">
+            <g class="node node-gray" tabindex="0">
+              <title>Profile Page</title>
+              <rect x="56" y="332" width="88" height="40" rx="12"/>
+              <text x="100" y="352" text-anchor="middle" dominant-baseline="central">Profile</text>
+            </g>
+          </a>
+
+          <a href="sitemap.html">
+            <g class="node node-gray" tabindex="0">
+              <title>Sitemap Page</title>
+              <rect x="226" y="332" width="88" height="40" rx="12"/>
+              <text x="270" y="352" text-anchor="middle" dominant-baseline="central">Sitemap</text>
+            </g>
+          </a>
+
+          <a href="content_ST1.html">
+            <g class="node node-green" tabindex="0">
+              <title>Content Page - Student 1</title>
+              <rect x="456" y="332" width="108" height="40" rx="12"/>
+              <text x="510" y="352" text-anchor="middle" dominant-baseline="central">Content ST1</text>
+            </g>
+          </a>
+
+          <a href="content_ST2.html">
+            <g class="node node-green" tabindex="0">
+              <title>Content Page - Student 2</title>
+              <rect x="626" y="332" width="108" height="40" rx="12"/>
+              <text x="680" y="352" text-anchor="middle" dominant-baseline="central">Content ST2</text>
+            </g>
+          </a>
+
+          <!-- ROW 3 -->
+          <a href="content_ST3.html">
+            <g class="node node-green" tabindex="0">
+              <title>Content Page - Student 3</title>
+              <rect x="52" y="440" width="96" height="40" rx="12"/>
+              <text x="100" y="460" text-anchor="middle" dominant-baseline="central">Content ST3</text>
+            </g>
+          </a>
+
+          <a href="content_ST4.html">
+            <g class="node node-green" tabindex="0">
+              <title>Content Page - Student 4</title>
+              <rect x="222" y="440" width="96" height="40" rx="12"/>
+              <text x="270" y="460" text-anchor="middle" dominant-baseline="central">Content ST4</text>
+            </g>
+          </a>
+
+          <a href="pageEditor_ST4.html">
+            <g class="node node-purple" tabindex="0">
+              <title>Page Editor</title>
+              <rect x="456" y="440" width="108" height="40" rx="12"/>
+              <text x="510" y="460" text-anchor="middle" dominant-baseline="central">Page Editor</text>
+            </g>
+          </a>
+
+          <a href="validation_ST4.html">
+            <g class="node node-purple" tabindex="0">
+              <title>Validation Page</title>
+              <rect x="626" y="440" width="108" height="40" rx="12"/>
+              <text x="680" y="460" text-anchor="middle" dominant-baseline="central">Validation</text>
+            </g>
+          </a>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

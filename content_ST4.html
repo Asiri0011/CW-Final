@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+    <style>
+      /* On This Page Navigation */
+      .content-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .content-nav ul li a {
+        display: inline-block;
+        padding: 10px 18px;
+        background: #83858b;
+        color: #1f2937;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+      }
+
+      .content-nav ul li a:hover {
+        background: #b30000;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      /* Content Images */
+      .content-image {
+        width: 100%;
+        max-height: 430px;
+        object-fit: cover;
+        border-radius: 22px;
+        margin: 12px 0 28px;
+        display: block;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .content-nav ul {
+          flex-direction: column;
+        }
+
+        .content-nav ul li a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .content-image {
+          border-radius: 18px;
+          max-height: 260px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo">
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="content-page">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>Building Skills for the Future</h1>
+        </div>
+      </section>
+
+
+      <div class="container">
+        <nav class="content-nav" aria-label="Page sections">
+          <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#skills">Essential Skills</a></li>
+            <li><a href="#benefits">Why They Matter</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#future">Preparing for Tomorrow</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <section id="intro" class="content-section">
+        <div class="container">
+          <h2>Introduction</h2>
+          <img
+            src="img/content/st4/intro.png"
+            alt="Students developing modern skills for the future in an educational environment"
+            class="content-image"
+          >
+          <p>
+            Education today is not only about passing exams or memorising facts.
+            It is also about preparing students for the future by helping them
+            develop the knowledge, abilities, and attitudes needed to succeed in
+            modern life. These abilities are often called future skills because
+            they are important for careers, communication, problem-solving, and
+            personal growth in a rapidly changing world.
+          </p>
+          <p>
+            As technology, workplaces, and societies continue to evolve,
+            students need more than academic knowledge alone. They also need
+            practical skills such as digital literacy, critical thinking,
+            teamwork, creativity, and adaptability. These skills help learners
+            become more confident, capable, and ready to face new challenges and
+            opportunities.
+          </p>
+          <p>
+            Future skills are closely connected to Sustainable Development Goal
+            4: Quality Education, because good education should prepare learners
+            not only for today, but also for tomorrow. By focusing on future
+            skills, education can become more relevant, empowering, and useful
+            for real life.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <div class="container">
+          <h2>Essential Skills for the Future</h2>
+          <img
+            src="img/content/st4/skills.png"
+            alt="Students collaborating and building communication, digital, and problem-solving skills"
+            class="content-image"
+          >
+          <p>
+            There are many skills that are considered important for the future.
+            One of the most essential is digital literacy. In a world where
+            technology is part of education, work, and daily life, students need
+            to know how to use digital tools effectively, safely, and
+            responsibly.
+          </p>
+          <p>
+            Another key future skill is critical thinking. Students should be
+            able to analyse information, ask questions, solve problems, and make
+            informed decisions. This is especially important in a world where
+            people are constantly exposed to large amounts of information online
+            and offline.
+          </p>
+          <p>
+            Communication and teamwork are also highly valuable. Students often
+            need to work with others, share ideas, listen carefully, and express
+            themselves clearly. These social and communication skills are
+            important in both education and future careers.
+          </p>
+          <p>
+            Creativity, adaptability, and self-management are also essential.
+            Students who can think creatively, adjust to change, and manage
+            their time effectively are more likely to succeed in fast-changing
+            learning and working environments.
+          </p>
+        </div>
+      </section>
+
+      <section id="benefits" class="content-section">
+        <div class="container">
+          <h2>Why Future Skills Matter</h2>
+          <p>
+            Future skills matter because they help students become more prepared
+            for life beyond the classroom. Academic knowledge is important, but
+            students also need practical abilities that allow them to solve real
+            problems, communicate with others, and respond confidently to new
+            situations.
+          </p>
+          <p>
+            These skills can improve both academic performance and personal
+            development. For example, students with strong communication and
+            time management skills may be better able to organise their studies,
+            work effectively in groups, and express their ideas more clearly.
+          </p>
+          <p>
+            Future skills are also important for employment. Employers
+            increasingly look for individuals who can adapt, collaborate, think
+            critically, and use technology confidently. By developing these
+            skills early, students become more prepared for future careers and
+            long-term success.
+          </p>
+          <p>
+            In addition, future skills support lifelong learning. As the world
+            changes, people need to continue learning throughout their lives.
+            Students who develop curiosity, independence, and resilience are
+            more likely to keep learning and growing over time.
+          </p>
+        </div>
+      </section>
+
+      <section id="challenges" class="content-section">
+        <div class="container">
+          <h2>Challenges in Developing Future Skills</h2>
+          <img
+            src="img/content/st4/challenges.png"
+            alt="A student facing challenges while trying to build future-ready skills"
+            class="content-image"
+          >
+          <p>
+            Although future skills are important, not all students have equal
+            opportunities to develop them. One challenge is that some education
+            systems still focus heavily on memorisation and exam performance
+            rather than practical learning, creativity, and real-world
+            problem-solving.
+          </p>
+          <p>
+            Another challenge is unequal access to technology and modern
+            learning opportunities. Students who do not have reliable internet,
+            digital devices, or supportive learning environments may struggle to
+            build the same level of digital confidence and future readiness as
+            others.
+          </p>
+          <p>
+            Some students may also face personal challenges such as low
+            confidence, lack of guidance, or limited exposure to collaborative
+            and interactive learning experiences. Without encouragement and
+            support, they may not have enough chances to practise important
+            future-focused skills.
+          </p>
+          <p>
+            These challenges show that preparing students for the future
+            requires more than simply giving information. It also requires
+            supportive environments, equal access, and learning experiences that
+            encourage active participation and skill development.
+          </p>
+        </div>
+      </section>
+
+      <section id="future" class="content-section">
+        <div class="container">
+          <h2>Preparing for Tomorrow</h2>
+          <img
+            src="img/content/st4/future.png"
+            alt="Students preparing for future careers and opportunities through education"
+            class="content-image"
+          >
+          <p>
+            Preparing students for tomorrow means creating education systems
+            that support both knowledge and practical skill development. Schools
+            and universities should provide opportunities for students to think
+            independently, solve problems, work in teams, and use technology in
+            meaningful ways.
+          </p>
+          <p>
+            Teachers can help by using more interactive and student-centred
+            methods such as discussions, projects, presentations, and
+            collaborative tasks. These activities allow students to build
+            confidence and apply what they learn in more realistic and useful
+            contexts.
+          </p>
+          <p>
+            Students themselves can also take action by being curious,
+            practising communication, exploring digital tools, and taking
+            responsibility for their own learning. Small everyday habits, such
+            as reading, planning, asking questions, and working with others, can
+            make a big difference over time.
+          </p>
+          <p>
+            By focusing on future skills, education can become more relevant and
+            more empowering. It can help students not only succeed in exams, but
+            also thrive in work, society, and lifelong learning.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion" class="content-section">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <p>
+            Future skills are an essential part of quality education. They help
+            students become more confident, adaptable, and prepared for the
+            challenges and opportunities of modern life.
+          </p>
+          <p>
+            Skills such as digital literacy, communication, critical thinking,
+            and creativity are increasingly important in education, careers, and
+            society. When students are given the chance to develop these
+            abilities, they are better equipped for long-term success.
+          </p>
+          <p>
+            By supporting future skills in education, schools, communities, and
+            students themselves can contribute to Sustainable Development Goal 4
+            and help create a better, more capable, and more prepared generation
+            for tomorrow.
+          </p>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top" aria-label="Go to top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

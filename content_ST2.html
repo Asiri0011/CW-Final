@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+    <style>
+      /* On This Page Navigation */
+      .content-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .content-nav ul li a {
+        display: inline-block;
+        padding: 10px 18px;
+        background: #83858b;
+        color: #1f2937;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+      }
+
+      .content-nav ul li a:hover {
+        background: #b30000;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      /* Content Images */
+      .content-image {
+        width: 100%;
+        max-height: 430px;
+        object-fit: cover;
+        border-radius: 22px;
+        margin: 12px 0 28px;
+        display: block;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .content-nav ul {
+          flex-direction: column;
+        }
+
+        .content-nav ul li a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .content-image {
+          border-radius: 18px;
+          max-height: 260px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo">
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="content-page">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>The Rise of Digital Learning</h1>
+        </div>
+      </section>
+
+      
+      <div class="container">
+        <nav class="content-nav" aria-label="Page sections">
+          <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#tools">Digital Tools</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#future">Future of Learning</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+
+      <section id="intro" class="content-section">
+        <div class="container">
+          <h2>Introduction</h2>
+          <img
+            src="img/content/st2/intro.png"
+            alt="Students using digital devices for learning in a modern classroom"
+            class="content-image"
+          >
+          <p>
+            Digital learning has become one of the most important parts of
+            modern education. It refers to the use of technology such as
+            laptops, tablets, smartphones, online platforms, and digital
+            resources to support teaching and learning. In today’s world,
+            digital tools are helping students access information more easily,
+            communicate more effectively, and learn in more flexible ways.
+          </p>
+          <p>
+            Education is no longer limited to textbooks and classrooms alone.
+            With the help of technology, students can now attend virtual
+            lessons, complete online assignments, watch educational videos, and
+            explore learning materials from anywhere. This has changed the way
+            students study and the way teachers deliver knowledge.
+          </p>
+          <p>
+            Digital learning is closely connected to Sustainable Development
+            Goal 4: Quality Education because it can make learning more
+            accessible, engaging, and inclusive. When used effectively,
+            technology can help more students gain the skills and opportunities
+            they need for the future.
+          </p>
+        </div>
+      </section>
+
+      <section id="tools" class="content-section">
+        <div class="container">
+          <h2>Digital Tools in Education</h2>
+          <img
+            src="img/content/st2/tools.png"
+            alt="Students using laptops, tablets, and online learning tools"
+            class="content-image"
+          >
+          <p>
+            Many different digital tools are now used in education. These
+            include online learning platforms, virtual classrooms, educational
+            websites, video lessons, mobile apps, e-books, and interactive
+            quizzes. These tools help students access learning materials quickly
+            and make education more dynamic and interactive.
+          </p>
+          <p>
+            Learning management systems such as Google Classroom, Moodle, and
+            Microsoft Teams are often used by schools and universities to
+            organise assignments, share resources, and support communication
+            between students and teachers. Video conferencing tools also allow
+            students to participate in lessons even when they are not physically
+            in class.
+          </p>
+          <p>
+            In addition, digital tools can support different learning styles.
+            Some students learn better by reading, while others prefer visual
+            explanations, videos, or interactive activities. Technology allows
+            teachers to provide learning in multiple formats, which can make
+            education more effective and engaging.
+          </p>
+        </div>
+      </section>
+
+      <section id="benefits" class="content-section">
+        <div class="container">
+          <h2>Benefits of Digital Learning</h2>
+          <p>
+            One of the biggest advantages of digital learning is flexibility.
+            Students can often learn at their own pace, revisit difficult
+            topics, and access educational materials whenever they need them.
+            This can improve understanding and help students become more
+            independent learners.
+          </p>
+          <p>
+            Another major benefit is accessibility. Digital platforms can make
+            education available to students in different locations, including
+            those who may not always have access to physical classrooms or
+            traditional learning materials. Online resources can also support
+            students who need extra revision or additional academic help.
+          </p>
+          <p>
+            Digital learning can also improve engagement. Interactive lessons,
+            educational videos, quizzes, and multimedia content often make
+            learning more interesting and easier to understand. Students are
+            more likely to stay focused when learning feels practical, visual,
+            and connected to modern life.
+          </p>
+          <p>
+            Finally, digital education helps students develop important
+            21st-century skills such as digital literacy, online communication,
+            research ability, and independent problem-solving. These are
+            valuable skills not only for academic success but also for future
+            careers and lifelong learning.
+          </p>
+        </div>
+      </section>
+
+      <section id="challenges" class="content-section">
+        <div class="container">
+          <h2>Challenges of Digital Learning</h2>
+          <img
+            src="img/content/st2/challenges.png"
+            alt="A student facing difficulties with online learning and technology access"
+            class="content-image"
+          >
+          <p>
+            Although digital learning has many benefits, it also comes with
+            challenges. One major issue is unequal access to technology. Not all
+            students have reliable internet, personal laptops, tablets, or quiet
+            spaces to study. This creates a digital divide, where some students
+            are able to learn more effectively than others simply because they
+            have better resources.
+          </p>
+          <p>
+            Another challenge is distraction. Learning online can sometimes make
+            it harder for students to stay focused, especially when social
+            media, entertainment, or home responsibilities are nearby. Without
+            strong time management and motivation, digital learning can become
+            difficult to manage.
+          </p>
+          <p>
+            Some students and teachers may also struggle with digital
+            confidence. Not everyone is equally comfortable using online tools,
+            platforms, or software. This can slow down learning and make online
+            education feel stressful rather than supportive.
+          </p>
+          <p>
+            In addition, spending too much time online can lead to screen
+            fatigue, reduced concentration, and less face-to-face interaction.
+            This means digital learning should be used in balanced and
+            thoughtful ways to ensure students remain engaged and supported.
+          </p>
+        </div>
+      </section>
+
+      <section id="future" class="content-section">
+        <div class="container">
+          <h2>The Future of Learning</h2>
+          <img
+            src="img/content/st2/future.png"
+            alt="Students learning with modern digital tools in a future-focused educational setting"
+            class="content-image"
+          >
+          <p>
+            The future of education is likely to become even more connected to
+            technology. As digital tools continue to improve, students may have
+            access to smarter learning systems, personalised study platforms,
+            virtual simulations, and more interactive educational experiences.
+          </p>
+          <p>
+            Technology can help make education more adaptable and more
+            inclusive, especially when combined with good teaching practices and
+            equal access. It has the potential to support lifelong learning and
+            help students continue developing skills even beyond school or
+            university.
+          </p>
+          <p>
+            However, the future of learning should not depend only on
+            technology. It should also focus on fairness, accessibility, and
+            meaningful support for students. Digital tools are most effective
+            when they are used to enhance learning rather than replace human
+            guidance and connection.
+          </p>
+          <p>
+            By using technology responsibly and inclusively, digital learning
+            can play a major role in building a better educational future for
+            everyone.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion" class="content-section">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <p>
+            Digital learning has transformed education by making knowledge more
+            accessible, flexible, and interactive. It allows students to explore
+            new ways of learning, gain digital skills, and connect with
+            information more easily than ever before.
+          </p>
+          <p>
+            At the same time, digital education also brings challenges such as
+            unequal access, distractions, and the need for better support. These
+            issues show that technology alone is not enough - it must be used
+            fairly and effectively.
+          </p>
+          <p>
+            As education continues to evolve, digital learning will remain an
+            important part of building inclusive and high-quality education
+            systems. When used responsibly, it can support Sustainable
+            Development Goal 4 and help create better learning opportunities for
+            all.
+          </p>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

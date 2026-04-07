@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Gallery - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" >
+    <script src="js/global.js"></script>
+
+    <style>
+      /* GALLERY GRID */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 5px;
+      }
+
+      .gallery-item {
+        cursor: pointer;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 10px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .gallery-item p {
+        text-align: center;
+      }
+
+      /* HOVER STYLE */
+      .gallery-item.active {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* MODAL */
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background: #fff;
+        padding: 20px;
+        max-width: 800px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      #modalTitle {
+        text-align: left;
+        margin: 10px 0 0 0;
+      }
+
+      #modalDesc {
+        text-align: left;
+        margin: 0;
+      }
+
+      .controls {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .controls div {
+        text-align: left;
+      }
+
+      .controls-container {
+        background-color: #efefef;
+        border-radius: 999px;
+      }
+
+      #closeModal {
+        float: right;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      .modal.dark .modal-content {
+        background: #111;
+        color: #fff;
+      }
+
+      .font-arial {
+        font-family: Arial;
+      }
+
+      .font-georgia {
+        font-family: Georgia;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link active" href="gallery.html" data-alt="Gallery"
+            >Gallery</a
+          >
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>SDG Programs & Community Feedback</h1>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <h2>SDG Gallery</h2>
+
+        <div class="gallery-grid">
+          <div
+            class="gallery-item"
+            data-title="Access to Education"
+            data-desc="Access to education is the foundation of SDG 4. Every student should have the opportunity to learn in a safe, supportive, and well-equipped environment."
+            data-img="/img/gallery/1.png"
+          >
+            <img
+              src="/img/gallery/1.png"
+              alt="Students accessing education in a learning environment"
+            >
+            <p>Access to Education</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Digital Learning"
+            data-desc="Digital learning helps students access knowledge through online classes, educational apps, and modern technology in flexible learning environments."
+            data-img="/img/gallery/2.png"
+          >
+            <img
+              src="/img/gallery/2.png"
+              alt="Students using digital devices for learning"
+            >
+            <p>Digital Learning</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Inclusive Classrooms"
+            data-desc="Inclusive classrooms ensure that all students feel welcomed, respected, and supported regardless of their background, ability, or learning needs."
+            data-img="/img/gallery/3.png"
+          >
+            <img
+              src="/img/gallery/3.png"
+              alt="Diverse students learning together in an inclusive classroom"
+            >
+            <p>Inclusive Classrooms</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Peer Support"
+            data-desc="Peer support encourages students to help one another through teamwork, shared learning, and academic collaboration."
+            data-img="/img/gallery/4.png"
+          >
+            <img
+              src="/img/gallery/4.png"
+              alt="Students helping each other study"
+            >
+            <p>Peer Support</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Learning Resources"
+            data-desc="Books, libraries, digital tools, and study materials play an important role in supporting quality education and equal learning opportunities."
+            data-img="/img/gallery/5.png"
+          >
+            <img
+              src="/img/gallery/5.png"
+              alt="Educational books and learning resources"
+            >
+            <p>Learning Resources</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Future Skills"
+            data-desc="Education helps students build future-ready skills such as communication, teamwork, problem-solving, and digital literacy."
+            data-img="/img/gallery/6.png"
+          >
+            <img
+              src="/img/gallery/6.png"
+              alt="Students developing future skills in a modern learning environment"
+            >
+            <p>Future Skills</p>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-title="Equal Opportunity"
+            data-desc="Equal opportunity in education means that every student should have a fair chance to succeed regardless of background or personal circumstances."
+            data-img="/img/gallery/7.png"
+          >
+            <img
+              src="/img/gallery/7.png"
+              alt="Students representing equal opportunity in education"
+            >
+            <p>Equal Opportunity</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL / EXTENDED VIEW -->
+      <div id="galleryModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal">&times;</span>
+
+          <!-- USER CUSTOMIZATION -->
+          <div class="controls">
+            <div>
+              <label>Theme:</label>
+              <div class="controls-container">
+                <button class="btn" onclick="changeTheme('light')">
+                  Light
+                </button>
+                <button class="btn" onclick="changeTheme('dark')">Dark</button>
+              </div>
+            </div>
+
+            <div>
+              <label>Font:</label>
+              <div class="controls-container">
+                <button class="btn font-arial" onclick="changeFont('Arial')">
+                  Arial
+                </button>
+                <button
+                  class="btn font-georgia"
+                  onclick="changeFont('Georgia')"
+                >
+                  Georgia
+                </button>
+              </div>
+            </div>
+          </div>
+          <img id="modalImg" src="/img/logo/logo.png" alt="Expanded gallery image">
+          <h3 id="modalTitle">Loading...</h3>
+          <p id="modalDesc">Loading...</p>
+        </div>
+      </div>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      const items = document.querySelectorAll(".gallery-item");
+      const modal = document.getElementById("galleryModal");
+      const modalImg = document.getElementById("modalImg");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const closeBtn = document.getElementById("closeModal");
+
+      /* HOVER INTERACTION (JS REQUIRED) */
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          item.classList.add("active");
+        });
+
+        item.addEventListener("mouseleave", () => {
+          item.classList.remove("active");
+        });
+
+        /* CLICK TO OPEN */
+        item.addEventListener("click", () => {
+          modal.style.display = "flex";
+
+          modalImg.src = item.dataset.img;
+          modalTitle.textContent = item.dataset.title;
+          modalDesc.textContent = item.dataset.desc;
+        });
+      });
+
+      /* CLOSE MODAL */
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      /* CLICK OUTSIDE CLOSE */
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      /* USER CUSTOMIZATION */
+      function changeTheme(type) {
+        if (type === "dark") {
+          modal.classList.add("dark");
+        } else {
+          modal.classList.remove("dark");
+        }
+      }
+
+      function changeFont(font) {
+        document.querySelector(".modal-content").style.fontFamily = font;
+      }
+    </script>
+  </body>
+</html>

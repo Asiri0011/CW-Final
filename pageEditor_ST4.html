@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Vithum</title>
+    <link rel="icon" href="/img/logo/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/" aria-label="Go to Home">
+                <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                <span class="brand-title">SmartEdu</span>
+            </a>
+            <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'flex'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="/" data-alt="Home">Home</a>
+                <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+                <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+                <a class="nav-link" href="feedback.html" data-alt="Feedback">Feedback</a>
+                <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+                <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+                <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+                <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'none'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="stud">
+        <h2>Vithum | Team G5 | Profile Page / Site Map</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="profile">Profile page</h2>
+                <h3>Technical Description</h3>
+                <p>
+                    I developed this profile page using HTML, CSS, and JavaScript to create an interactive progressive
+                    user profile feature. JavaScript is used to collect user input through multiple steps, display the
+                    entered details dynamically, and calculate profile completion using a progress bar. I also used
+                    styled content boxes and responsive design to make the page visually organised and user-friendly.
+                </p>
+                <h3>Accessibility</h3>
+                <p>
+                    I considered accessibility by using clear headings, readable text, visible buttons, and a simple
+                    page structure to make the profile process easier to follow. The layout is responsive for different
+                    screen sizes, and the progress information is displayed clearly to help users understand their
+                    completion status.
+                </p>
+                <h3>Link to the validation page</h3>
+                <!-- Update the path to link the Page Editor with the splash page -->
+                <p><a href="validation_ST4.html#profileVal">View Validation Report</a>, use the marker to
+                    jump to the corresponding section of the validation page.</p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                <h3>Link to the page</h3>
+                <p><a href="profile.html">View Profile Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="sitemap">Sitemap Page</h2>
+                <h3>Technical Description</h3>
+                <p>
+                    I developed this sitemap page using HTML, CSS, and SVG to visually represent the structure of the
+                    SmartEdu website. I used SVG elements to create nodes and connecting lines, allowing users to
+                    clearly understand the relationship between pages. Each node is interactive and linked to different
+                    pages, making navigation more intuitive and user-friendly.
+                </p>
+                <h3>Accessibility</h3>
+                <p>
+                    I considered accessibility by including descriptive labels, titles, and ARIA attributes within the
+                    SVG to support screen readers. The sitemap uses clear text, structured layout, and clickable
+                    elements to help users easily navigate the website. The design is also responsive, ensuring
+                    usability across different devices and screen sizes.
+                </p>
+
+                <h3>Link to the validation page</h3>
+                <!-- Update the path to link the Page Editor with the splash page -->
+                <p><a href="validation_ST4.html#siteMapVal"> View validation Report</a>, use the marker to jump to
+                    the corresponding section of the validation page.</p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+
+                <h3>Link to the page</h3>
+                <p><a href="sitemap.html">View Sitemap Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                <h3>Technical Description</h3>
+                <p>The Content page was structured using semantic HTML elements such as < section>, < article>, and
+                            headings to organise information logically. Paragraph < p> tags were used to present textual
+                                content clearly.CSS was used to control layout, spacing, and typography, ensuring
+                                consistency with the rest of the website. Styling such as margins, padding, and font
+                                sizes were applied to improve readability.</p>
+
+                <h3>Accessibility</h3>
+                <p>Accessibility of content was ensured by using clear and structured headings, making it easier for
+                    screen readers to interpret the content. Text content was written in a readable format with
+                    appropriate styles like font size ,space.Links were clearly labelled, and colour contrast was
+                    maintained to ensure visibility for users with visual impairments.</p>
+
+                <h3>Link to the validation page</h3>
+                <!-- Update the path to link the Page Editor with the splash page -->
+                <p><a href="validation_ST4.html#contentVal">View validation Report</a>, use the marker to jump to
+                    the corresponding section of the validation page.</p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+
+                <h3>Link to the page</h3>
+                <p><a href="content_ST4.html">View Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                <p>During the development process, one of the main challenges was ensuring consistency across all pages
+                    while working in a group. This was resolved by using shared CSS files and agreed design guidelines.
+                    Another challenge was implementing responsive layouts, which was overcome by using CSS Flexbox and
+                    Grid.I also faced difficulties in aligning elements correctly and managing spacing, but through
+                    practice and testing, I improved my understanding of CSS layout techniques. This project helped me
+                    better understand the importance of clean code structure, teamwork, and planning in web development.
+                </p>
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                <p>The web pages created comply with general web development standards and guidelines. Proper HTML
+                    structure was followed using semantic elements, ensuring that the content is accessible and
+                    meaningful. External CSS was used instead of inline styling to maintain clean and maintainable
+                    code.Accessibility guidelines such as providing alt text for images and ensuring good colour
+                    contrast were followed. Links are clearly labelled, and navigation is consistent across all pages.
+                    No copyrighted content was used without proper referencing, and all resources are appropriately
+                    credited. <a href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html"
+                        target="_blank">See the lecture notes for more details on compliance.</a></p>
+
+
+            </section>
+
+            <section>
+                <h2 id="group"> Group Meetings and Individual Contribution Log</h2>
+                <p>Group Meetings and Contribution Log that documents my engagement with group work.</p>
+                Requirements:
+                <ul>
+                    <li>A minimum of six (6) group meetings must be recorded.</li>
+                    <li>Each student must provide their own account of the meetings.</li>
+                    <li>The log must focus on individual contribution, not just group activity.</li>
+                </ul>
+                <p>Feel free to follow the example table structure below:</p>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th colspan="6">Group Meetings and Contribution Log</th>
+                        </tr>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Date &amp; Time</th>
+                            <th>Format</th>
+                            <th>Objective</th>
+                            <th>Attended</th>
+                            <th>Your Individual Contribution</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>3 Feb 2026, 2:00 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Select SDG and assign pages</td>
+                            <td>Yes</td>
+                            <td>I agreed to develop the User Profile and Sitemap pages.</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>8 Feb 2026, 7:30 pm</td>
+                            <td>Online</td>
+                            <td>Plan website structure and design</td>
+                            <td>Yes</td>
+                            <td>I planned the structure for the User Profile prompts and SVG sitemap.</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>15 Feb 2026, 4:00 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Develop shared template and navigation</td>
+                            <td>Yes</td>
+                            <td>I implemented the User Profile page using JavaScript prompts and DOM updates.</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>22 Feb 2026, 8:00 pm</td>
+                            <td>Online</td>
+                            <td>Review progress and fix issues</td>
+                            <td>Yes</td>
+                            <td>I created the SVG sitemap with clickable nodes and hover effects.</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>5 Mar 2026, 3:00 pm</td>
+                            <td>Online</td>
+                            <td>Test functionality and responsiveness</td>
+                            <td>Yes</td>
+                            <td>I improved responsiveness and ensured links worked correctly across all pages.</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>23 Mar 2026, 6:30 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Final testing, validation and improvements</td>
+                            <td>Yes</td>
+                            <td>I tested functionality, fixed issues, and ensured accessibility and validation
+                                compliance.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources i used following a consistent format (e.g., APA, MLA, or a simplified
+                    style). For example:<br><br>
+                <ul class="ref">
+                    <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last
+                        accessed: 11 Feb 2025).</li>
+                    <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc.
+                            Indianappolis.</i></li>
+                    <li><em>W3Schools</em> (2025) <em>HTML Tutorial</em>. Available at: <a
+                            href="https://www.w3schools.com" target="_blank">https://www.w3schools.com</a> (Accessed: 10
+                        March 2026).</li>
+                    <li><em>Google</em> (2025) <em>Google Flow (Image Generation Tool)</em>. Available at: <a
+                            href="https://labs.google/" target="_blank">https://labs.google/</a> (Accessed: 10 March
+                        2026).</li>
+                    <li>W3C (n.d.) <i>The W3C Markup Validation Service</i>. Available at: <a
+                            href="https://validator.w3.org/" target="_blank"
+                            rel="noopener">https://validator.w3.org/</a> (Accessed: 26 March 2026).</li>
+                    <li>United Nations (n.d.) <i>Sustainable Development Goal 4: Quality Education</i>. Available at: <a
+                            href="https://sdgs.un.org/goals/goal4" target="_blank"
+                            rel="noopener">https://sdgs.un.org/goals/goal4</a> (Accessed: 26 March 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+            <ul class="top-level-ul">
+                <li>Student 4</li>
+                <ul>
+                    <li><a href="profile.html">User Profile </a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="content_ST4.html">Content</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

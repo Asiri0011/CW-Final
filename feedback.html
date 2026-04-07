@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Feedback & Programs - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" >
+    <script src="js/global.js"></script>
+
+    <style>
+      .select-filter {
+        width: 300px;
+      }
+
+      .program-section {
+        margin: 40px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 15px;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .program-scroll {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 15px 5px;
+        scrollbar-width: thin;
+        /* For Firefox */
+        scrollbar-color: #880406 #eee;
+      }
+
+      /* Webkit scrollbar styling */
+      .program-scroll::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .program-scroll::-webkit-scrollbar-thumb {
+        background: #880406;
+        border-radius: 10px;
+      }
+
+      .program-card {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        background-color: #fefefe;
+        border: #ccc solid 1px;
+        border-radius: 10px;
+      }
+
+      .card-header {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 0.9rem;
+        z-index: 2;
+      }
+
+      .card-header .location {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+
+      .card-header .favorite {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 4px 8px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .program-card img {
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .program-card h3 {
+        padding: 10px 15px 0;
+      }
+
+      .card-highlights {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        font-size: 0.85rem;
+        padding: 10px 15px;
+        color: #444;
+      }
+
+      .card-meta {
+        padding: 0 15px;
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      .card-pricing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f1f1f1;
+        padding: 10px 15px;
+        margin: 10px 0;
+        font-size: 0.9rem;
+      }
+
+      .card-pricing strong {
+        font-size: 1.1rem;
+        color: #000;
+      }
+
+      .card-pricing .per-day {
+        color: #888;
+        font-size: 0.8rem;
+      }
+
+      .card-desc {
+        padding: 0 15px;
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .card-actions {
+        display: flex;
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .feeback-reviews-box {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* --- REVIEWS SECTION --- */
+      .reviews-container {
+        margin: 50px 0;
+      }
+
+      .rating-summary {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .review-grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .review-card {
+        background: #fff;
+        padding: 20px;
+        border-left: 4px solid #880406;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      /* --- FEEDBACK FORM --- */
+      .feedback-section {
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+      }
+
+      fieldset {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      legend {
+        padding: 0 10px;
+        font-weight: bold;
+        color: #880406;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* Ensures padding doesn't break width */
+      }
+
+      .error-msg {
+        color: #d9534f;
+        font-size: 0.85rem;
+        margin-top: 4px;
+        display: none;
+        /* Hidden by default */
+      }
+
+      .input-error {
+        border-color: #d9534f;
+        background-color: #fff2f2;
+      }
+
+      #charCounter {
+        text-align: right;
+        font-size: 0.8rem;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      #submissionOutput {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        display: none;
+      }
+
+      .success-banner {
+        background: #dff0d8;
+        color: #3c763d;
+        border: 1px solid #d6e9c6;
+        display: block !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link active" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>SDG Programs & Community Feedback</h1>
+        </div>
+      </section>
+
+      <section class="program-section">
+        <div class="section-header">
+          <h2>Volunteer Opportunities</h2>
+          <select aria-label="Sort programs" class="select-filter">
+            <option>Most Popular</option>
+            <option>Nearest</option>
+            <option>Student-friendly</option>
+          </select>
+        </div>
+
+        <div class="program-scroll">
+          <article class="program-card program-card">
+            <div class="card-header">
+              <span class="location">🌍 Sri Lanka</span>
+              <span class="favorite">♡</span>
+            </div>
+
+            <img src="/img/program/2.png" alt="Peer Tutoring Program" >
+
+            <h3>Peer Tutoring Program</h3>
+
+            <div class="card-highlights">
+              <div>📚 Supports student learning</div>
+              <div>⏰ 2–4 hrs per Day</div>
+              <div>🎓 Student-friendly opportunity</div>
+              <div>📍 School-based</div>
+              <div>💰 Fees from Rs.50000/=</div>
+            </div>
+
+            <div class="card-meta">
+              <p>📅 Duration: 1–15 weeks</p>
+              <p>👥 Ages: 18+</p>
+            </div>
+
+            <div class="card-pricing">
+              <span>2 weeks</span>
+              <strong>Rs.30000/=</strong>
+              <span class="per-day">Rs.3000/day</span>
+            </div>
+
+            <p class="card-desc">
+              Help classmates or younger students improve their understanding in
+              subjects like maths, science, and English through friendly
+              academic support.
+            </p>
+
+            <div class="card-actions">
+              <button class="btn btn-primary">Join Now</button>
+            </div>
+          </article>
+
+          <article class="program-card program-card">
+            <div class="card-header">
+              <span class="location">🌍 Sri Lanka</span>
+              <span class="favorite">♡</span>
+            </div>
+
+            <img src="/img/program/1.png" alt="Digital Learning Support" >
+
+            <h3>Digital Learning Support</h3>
+
+            <div class="card-highlights">
+              <div>📚 Supports student learning</div>
+              <div>⏰ 2–4 hrs per Day</div>
+              <div>🌐 Hybrid / online friendly</div>
+              <div>📍 School or remote support</div>
+              <div>💰 Fees from Rs.60000/=</div>
+            </div>
+
+            <div class="card-meta">
+              <p>📅 Duration: 1–20 weeks</p>
+              <p>👥 Ages: 20+</p>
+            </div>
+
+            <div class="card-pricing">
+              <span>2 weeks</span>
+              <strong>Rs.40000/=</strong>
+              <span class="per-day">Rs.4000/day</span>
+            </div>
+
+            <p class="card-desc">
+              Support students by helping them access online learning tools,
+              educational platforms, and digital study resources for more
+              flexible learning.
+            </p>
+
+            <div class="card-actions">
+              <button class="btn btn-primary">Join Now</button>
+            </div>
+          </article>
+
+          <article class="program-card program-card">
+            <div class="card-header">
+              <span class="location">🌍 Sri Lanka</span>
+              <span class="favorite">♡</span>
+            </div>
+
+            <img src="/img/program/3.png" alt="Reading & Homework Club" >
+
+            <h3>Reading & Homework Club</h3>
+
+            <div class="card-highlights">
+              <div>📚 Supports student learning</div>
+              <div>⏰ 2–4 hrs per Day</div>
+              <div>🏫 Community learning support</div>
+              <div>📍 Local school</div>
+              <div>💰 Fees from Rs.50000/=</div>
+            </div>
+
+            <div class="card-meta">
+              <p>📅 Duration: 1–15 weeks</p>
+              <p>👥 Ages: 18+</p>
+            </div>
+
+            <div class="card-pricing">
+              <span>2 weeks</span>
+              <strong>Rs.30000/=</strong>
+              <span class="per-day">Rs.3000/day</span>
+            </div>
+
+            <p class="card-desc">
+              Volunteer to guide younger learners with reading practice,
+              homework support, and study habits in a friendly and encouraging
+              environment.
+            </p>
+
+            <div class="card-actions">
+              <button class="btn btn-primary">Join Now</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="feeback" class="feeback-reviews-box">
+        <div class="reviews-container">
+          <div class="rating-summary">
+            <h2 style="font-size: 3rem; margin: 0">9.4/10</h2>
+            <p><strong>Exceptional</strong> - Based on 109 verified reviews</p>
+          </div>
+
+          <div class="review-grid">
+            <div class="review-card">
+              <h2>"Life-changing experience"</h2>
+              <p>
+                The turtle conservation project was perfectly organized. I felt
+                I made a real impact.
+              </p>
+              <a href="#">See more</a>
+              <p>
+                <small
+                  ><strong>Swetha</strong> • Aug 12, 2025 • Rating:
+                  10/10</small
+                >
+              </p>
+            </div>
+
+            <div class="review-card">
+              <h2>"Great for Students"</h2>
+              <p>
+                Flexible hours and very accommodating staff. Perfect for summer
+                break.
+              </p>
+              <a href="#">See more</a>
+              <p>
+                <small
+                  ><strong>Dr. Ajith</strong> • Oct 16, 2025 • Rating:
+                  9/10</small
+                >
+              </p>
+            </div>
+
+            <div class="review-card">
+              <h2>"Highly Recommend"</h2>
+              <p>
+                The childcare program in Arusha was eye-opening and deeply
+                rewarding.
+              </p>
+              <a href="#">See more</a>
+              <p>
+                <small
+                  ><strong>Asanka Kumara</strong> • Jan 05, 2026 • Rating:
+                  10/10</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-section">
+          <h2>Submit Your Feedback</h2>
+          <form id="sdgFeedbackForm" novalidate>
+            <fieldset>
+              <legend>Personal Details</legend>
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="John Doe" >
+                <span class="error-msg" id="nameError"
+                  >Please enter your full name.</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="email@example.com"
+              >
+                <span class="error-msg" id="emailError"
+                  >Please enter a valid email.</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telephone Number</label>
+                <input type="tel" id="phone" placeholder="+1 234 567 890" >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Feedback Details</legend>
+              <div class="form-group">
+                <label for="address">Program Address/Location</label>
+                <textarea id="address" rows="2"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="programType">Inquiry Type</label>
+                <input
+                  list="programOptions"
+                  id="programType"
+                  placeholder="Start typing to search..."
+                >
+                <datalist id="programOptions">
+                  <option value="Volunteering"></option>
+                  <option value="Donation"></option>
+                  <option value="Partnership"></option>
+                  <option value="General Support"></option>
+                </datalist>
+              </div>
+
+              <div class="form-group">
+                <label for="visitDate">Date of Involvement</label>
+                <input type="date" id="visitDate" >
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  >Comment/Message (Max 200 characters)</label
+                >
+                <textarea id="message" maxlength="200" rows="4"></textarea>
+                <div id="charCounter">200 characters remaining</div>
+                <span class="error-msg" id="messageError"
+                  >Message cannot be empty.</span
+                >
+              </div>
+            </fieldset>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width: auto; padding: 10px 40px"
+            >
+              Send Feedback
+            </button>
+          </form>
+          <div id="submissionOutput"></div>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // 1. Character Counter Interactivity
+      const messageArea = document.getElementById("message");
+      const charDisplay = document.getElementById("charCounter");
+      const maxChars = 200;
+
+      messageArea.addEventListener("input", () => {
+        const remaining = maxChars - messageArea.value.length;
+        charDisplay.textContent = `${remaining} characters remaining`;
+
+        // Visual warning when low
+        charDisplay.style.color = remaining < 20 ? "red" : "#666";
+      });
+
+      // 2. Form Validation & Submission
+      const form = document.getElementById("sdgFeedbackForm");
+      const output = document.getElementById("submissionOutput");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Reset states
+        let isValid = true;
+        const errors = document.querySelectorAll(".error-msg");
+        const inputs = document.querySelectorAll("input, textarea");
+        errors.forEach((err) => (err.style.display = "none"));
+        inputs.forEach((input) => input.classList.remove("input-error"));
+
+        // Name Validation
+        const name = document.getElementById("fullName");
+        if (name.value.trim().length < 2) {
+          document.getElementById("nameError").style.display = "block";
+          name.classList.add("input-error");
+          isValid = false;
+        }
+
+        // Email Validation (Regex)
+        const email = document.getElementById("email");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+          document.getElementById("emailError").style.display = "block";
+          email.classList.add("input-error");
+          isValid = false;
+        }
+
+        // Message Validation
+        if (messageArea.value.trim().length === 0) {
+          document.getElementById("messageError").style.display = "block";
+          messageArea.classList.add("input-error");
+          isValid = false;
+        }
+
+        // 3. Final Confirmation
+        if (isValid) {
+          output.className = "success-banner";
+          output.innerHTML = `<strong>Success!</strong> Thank you, ${name.value}. Your feedback has been received.`;
+          form.reset();
+          charDisplay.textContent = "200 characters remaining";
+          window.scrollTo({ top: output.offsetTop - 100, behavior: "smooth" });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AUTO REDIRECT -->
+    <meta http-equiv="refresh" content="4; url=/">
+
+    <style>
+        /* FULL SCREEN BACKGROUND */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background: url("/img/splash.png") center/cover no-repeat;
+        }
+
+        /* DARK OVERLAY FOR READABILITY */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        /* CONTENT */
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .mission {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .team {
+            margin-bottom: 25px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* LOADER (CSS ONLY) */
+        .loader {
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.2);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* COUNTDOWN */
+        #countdown {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* SKIP BUTTON */
+        .skip-btn {
+            margin-top: 20px;
+            padding: 10px 18px;
+            border: none;
+            background: #2f6f8e;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .skip-btn:hover {
+            background: #1d4f6b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1>SmartEdu</h1>
+
+        <p class="mission">
+            Empowering communities to take action towards sustainable development goals through awareness and engagement.
+        </p>
+
+        <div class="team">
+            Pramuditha • Asiri • Anuda • Vithum
+        </div>
+
+        <div class="loader"></div>
+
+        <div id="countdown">Redirect in 4...</div>
+
+        <button class="skip-btn" onclick="skipIntro()">Skip Intro</button>
+    </div>
+
+    <script>
+        let timeLeft = 4;
+        const countdownEl = document.getElementById("countdown");
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = "Redirect in " + timeLeft + "...";
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+
+        function skipIntro() {
+            clearInterval(timer);
+            window.location.href = "/";
+        }
+    </script>
+
+</body>
+</html>

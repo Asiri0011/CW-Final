@@ -1,0 +1,368 @@
+:root {
+  --primary: #880406;
+  --secondary: #9c7405;
+  --neutral: #F6F7FB;
+
+  --text: #1F2937;
+  --muted: #6B7280;
+
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.10);
+
+  --radius: 14px;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+  --focus: #880406;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--neutral);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.site-main {
+  padding: 24px 0 30px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ===== Typography ===== */
+.small {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ===== Link ===== */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color:  var(--primary);
+}
+
+/* ===== Website Header ===== */
+#site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+    width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 1.05rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu-button {
+  display: none;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: inherit;
+  transition: padding 600ms ease, font-size 600ms ease, transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-link::after {
+  content: attr(data-alt);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--nav-bg, #000);
+  color: var(--nav-text, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom;
+  transform: translateY(calc(100% + 2px)) scale(0);
+  transition: transform 0.35s ease;
+  z-index: 0;
+  font-size: 0.95rem;
+  border-radius: 23px;
+}
+
+.nav-link:hover::after {
+  transform: translateY(0);
+}
+
+.nav-link:hover {
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: rgba(205, 205, 205, 0.21);
+  font-weight: 700;
+}
+
+.site-nav:not(:hover) {
+  .nav-link.active {
+    padding: 10px 25px;
+  }
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  padding: 18px;
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card p {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.card ul li {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  padding: 15px 24px;
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  text-decoration: none;
+}
+
+.btn-primary{
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary{
+  background-color: #ffd7d8;
+  color: #000000;
+}
+
+.btn-dark-primary{
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+.btn-dark-secondary{
+  background-color: #ffffff30;
+  color: #fff;
+}
+
+.btn-group{
+  display: flex;
+  gap: 8px;
+}
+
+/* ===== Website Footer ===== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--card-border);
+  padding: 18px 0;
+  margin-top: 30px;
+}
+
+.footer-note{
+  max-width: 250px;
+  margin: 0;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.footer-col {
+  min-width: 220px;
+  color: var(--muted);
+}
+
+.footer-col strong {
+  color: var(--text);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* ===== Page Topic ===== */
+.topic-content{
+  position: absolute;
+  background-color:  var(--primary);
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.topic{
+  text-align: left;
+  margin-bottom: 200px;
+}
+
+.sub-heading{
+margin: -20px 0 20px 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ===== Utilities ===== */
+.btn-top{
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  background-color: var(--primary);
+width: 50px;
+height: 50px;
+border-radius: 999px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all .3s ease;
+padding-top: 5px;
+border: 1px solid #fff;
+}
+
+.top:hover{
+  transform: scale(1.1);
+}
+
+/* ===== Utilities ===== */
+.mt-10{
+  margin-top: 10px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.mt-40{
+  margin-top: 40px;
+}
+.mt-50{
+  margin-top: 50px;
+}

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Team - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" >
+    <script src="js/global.js"></script>
+
+    <style>
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .team-card {
+        grid-column: span 12;
+        background: #fff;
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      @media (min-width: 700px) {
+        .team-card {
+          grid-column: span 6;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .team-card {
+          grid-column: span 3;
+        }
+      }
+
+      /* IMAGE */
+      .team-card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* BASIC INFO */
+      .team-info {
+        padding: 12px;
+        text-align: center;
+      }
+
+      .team-info h3 {
+        margin: 6px 0;
+      }
+
+      .team-role {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      /* HOVER EFFECT */
+      .team-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow);
+      }
+
+      /* EXPANDABLE DETAILS */
+      .team-details {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        color: #fff;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* SHOW DETAILS ON HOVER + FOCUS */
+      .team-card:hover .team-details,
+      .team-card:focus .team-details {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ACCESSIBILITY FOCUS */
+      .team-card:focus {
+        outline: 3px solid var(--primary);
+      }
+    </style>
+  </head>
+
+  <body class="page-home">
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link active" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container site-main">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>Our Team</h1>
+        </div>
+      </section>
+
+      <section>
+        <h2>Meet Our Team</h2>
+        <p class="sub-heading">
+          Our team works together to build an engaging and accessible website
+          aligned with SDG goals.
+        </p>
+
+        <div class="team-grid">
+          <!-- MEMBER 1 -->
+          <div class="team-card" tabindex="0">
+            <img src="/img/team/1.png" alt="Pramuditha's portrait" >
+            <div class="team-info">
+              <h3>Shanuka Pramuditha</h3>
+              <div class="team-role">Home & Gallery</div>
+            </div>
+
+            <div class="team-details">
+              <h3>Shanuka Pramuditha</h3>
+              <p><strong>Role:</strong> Template & Home Page</p>
+              <p>
+                <strong>Contribution:</strong> Developed homepage layout and
+                gallery features.
+              </p>
+            </div>
+          </div>
+
+          <!-- MEMBER 2 -->
+          <div class="team-card" tabindex="0">
+            <img src="/img/team/2.png" alt="Asiri's portrait" >
+            <div class="team-info">
+              <h3>Asiri Madhusanka</h3>
+              <div class="team-role">Splash & Actions</div>
+            </div>
+
+            <div class="team-details">
+              <h3>Asiri Madhusanka</h3>
+              <p><strong>Role:</strong> Splash Screen & AIS Page</p>
+              <p>
+                <strong>Contribution:</strong> Implemented interactive
+                action-based features.
+              </p>
+            </div>
+          </div>
+
+          <!-- MEMBER 3 -->
+          <div class="team-card" tabindex="0">
+            <img src="/img/team/3.png" alt="Anuda's portrait" >
+            <div class="team-info">
+              <h3>Anuda Pasandul</h3>
+              <div class="team-role">Feedback & Team</div>
+            </div>
+
+            <div class="team-details">
+              <h3>Anuda Pasandul</h3>
+              <p><strong>Role:</strong> Feedback & Team Page</p>
+              <p>
+                <strong>Contribution:</strong> Designed team page and feedback
+                system.
+              </p>
+            </div>
+          </div>
+
+          <!-- MEMBER 4 -->
+          <div class="team-card" tabindex="0">
+            <img src="/img/team/4.png" alt="Vithum's portrait" >
+            <div class="team-info">
+              <h3>Vithum Manjitha</h3>
+              <div class="team-role">Profile & Sitemap</div>
+            </div>
+
+            <div class="team-details">
+              <h3>Vithum Manjitha</h3>
+              <p><strong>Role:</strong> Profile & Sitemap</p>
+              <p>
+                <strong>Contribution:</strong> Created user profile and sitemap
+                navigation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

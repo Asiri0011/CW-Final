@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Anuda Pasandul Lokuliyana</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="css/global.css" >
+</head>
+
+<body>
+
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/" aria-label="Go to Home">
+                <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+                <span class="brand-title">SmartEdu</span>
+            </a>
+            <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'flex'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="/" data-alt="Home">Home</a>
+                <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+                <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+                <a class="nav-link" href="feedback.html" data-alt="Feedback">Feedback</a>
+                <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+                <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+                <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+                <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'none'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Student summary -->
+    <section class="stud" id="top">
+        <h2>Anuda Pasandul Lokuliyana | Team G5 | Feedback Page / Team Page</h2>
+    </section>
+
+    <div class="container">
+        <main>
+            <!-- Student 3 implemented pages -->
+            <!-- Feedback page report -->
+            <section id="feedback">
+                <h2>Feedback Page</h2>
+                <h3>Technical Description</h3>
+                <p>The feedback page combines a small programme directory and a feedback form in one page. I used
+                    separate sections for the volunteer opportunities, review area, and form so the content is easy to
+                    follow. The programme area uses a horizontal scroll layout with three cards, short details, and
+                    action buttons. Below that, I added a rating summary and three review cards to make the page feel
+                    active and informative.</p>
+                <p>For styling, I used CSS flex and grid layouts for spacing and alignment. JavaScript is used for the
+                    main interactive parts of the page: the live character counter, form checking, custom error
+                    messages, and the success message shown after valid submission. I also included a sort dropdown and
+                    grouped the form fields with fieldsets and legends to keep the structure clear.</p>
+                <h3>Accessibility</h3>
+                <p>I used clear headings, labelled form controls, readable colour contrast, and visible validation
+                    feedback to support accessibility. Each input is paired with a label so screen readers can identify
+                    fields correctly. Error messages appear close to the related input, and the character counter
+                    provides helpful feedback without replacing the main label text. Buttons use clear wording, and the
+                    page structure follows a logical reading order to make keyboard navigation easier.</p>
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#feedbackVal">View Validation Report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="feedback.html">View Feedback Page</a></p>
+            </section>
+
+            <!-- Team page report -->
+            <section id="team">
+                <h2>Team Page</h2>
+                <h3>Technical Description</h3>
+                <p>The team page uses a responsive grid with four member cards. Each card includes an image, a name, a
+                    role, and an extra detail panel. The layout changes across screen sizes so the cards stack on small
+                    screens and spread across the page on larger screens.</p>
+                <p>I used hover and keyboard focus to reveal the hidden details on each card. This was done with simple
+                    positioning, opacity, and transition effects. I also added <code>tabindex="0"</code> to the cards so
+                    keyboard users can open the same information without using a mouse.</p>
+                <h3>Accessibility</h3>
+                <p>I included alt text for all member images and ensured that the hidden detail panel becomes visible on
+                    keyboard focus as well as mouse hover. Focus outlines are visible, which helps keyboard-only users
+                    understand where they are on the page. Text is grouped with headings and paragraphs rather than
+                    inserted only as decorative overlays, and the card order follows a meaningful structure. These
+                    choices improve accessibility while still keeping the design visually engaging.</p>
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#teamVal">View Validation Report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="team.html">View Team Page</a></p>
+            </section>
+
+            <!-- Content page report -->
+            <section id="content">
+                <h2>Content Page</h2>
+                <h3>Technical Description</h3>
+                <p>My content page is about inclusive learning under SDG 4: Quality Education. It is written as a long
+                    page with six clear sections: introduction, tools, benefits, challenges, future, and conclusion. At
+                    the top of the page I added internal links so users can jump to each section quickly.</p>
+                <p>The page uses images with alt text, clear headings, and repeated styling through the
+                    <code>content-image</code> class. CSS is used for spacing, image presentation, and the small
+                    navigation menu at the top. A fixed “Go to top” link is included to make the page easier to use when
+                    scrolling through longer content.</p>
+                <h3>Accessibility</h3>
+                <p>The content page uses heading levels in order, meaningful link text, alt text for images, and a local
+                    navigation menu with a clear ARIA label. The internal links help users move around long content more
+                    easily, especially when they do not want to scroll through the full page. I also kept the paragraph
+                    widths readable and ensured the page remains usable on mobile devices. These choices help make the
+                    page inclusive in both topic and implementation.</p>
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST3.html#contentVal">View Validation Report</a></p>
+                <h3>Link to the page</h3>
+                <p><a href="content_ST3.html">View Content Page</a></p>
+            </section>
+
+            <!-- Reflection section -->
+            <section id="challenge">
+                <h2>Challenges and Lessons Learned</h2>
+                <p>The main challenge on the feedback page was fitting several features into one clear layout. I solved
+                    this by splitting the page into simple sections and keeping the form styling consistent. Another
+                    challenge was writing form validation messages that were easy to understand.</p>
+                <p>On the team page, I had to make sure the card interaction worked for both mouse and keyboard users.
+                    On the content page, the challenge was organising a long topic into sections that were easy to read.
+                    These tasks helped me improve my understanding of structure, accessibility, and clear page design.
+                </p>
+            </section>
+
+            <!-- Compliance section -->
+            <section id="compliance">
+                <h2>Compliance</h2>
+                <p>The pages I developed were created for an educational purpose and are based on the SDG 4 theme of the
+                    website. I kept the content appropriate, respectful, and suitable for a university coursework
+                    website. I did not include harmful, misleading, or offensive material, and I avoided adding any
+                    malicious scripts or unsafe features.</p>
+                <p>I also considered Janet guidance by using simple semantic HTML structure, clear headings, and
+                    accessible page organisation. Images used on my pages include alternative text, and the Team page
+                    was designed to support keyboard access as well as mouse interaction. On the Feedback page, the form
+                    is used only as a coursework feature, and I kept the input fields relevant to the task. I also aimed
+                    to use original writing and carefully selected supporting resources so the pages remain suitable for
+                    academic use and consistent with accessibility and copyright expectations.</p>
+            </section>
+
+            <!-- Meeting log -->
+            <section id="group">
+                <h2>Group Meetings and Individual Contribution Log</h2>
+                <p>The table below records my own contribution as Student 3 during the development of the group
+                    coursework website.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="6">Group Meetings and Contribution Log</th>
+                        </tr>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Date &amp; Time</th>
+                            <th>Format</th>
+                            <th>Objective</th>
+                            <th>Attended</th>
+                            <th>Your Individual Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>3 Feb 2026, 2:00 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Select SDG and assign pages</td>
+                            <td>Yes</td>
+                            <td>I agreed to complete the Feedback page, Team page, and my own content page based on SDG
+                                4 and reviewed the coursework requirements for Student 3.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>8 Feb 2026, 7:30 pm</td>
+                            <td>Online</td>
+                            <td>Plan website structure and design</td>
+                            <td>Yes</td>
+                            <td>I suggested the content structure for the feedback page, including programme cards,
+                                reviews, and the feedback form so it matched the specification.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>15 Feb 2026, 4:00 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Develop shared template and navigation</td>
+                            <td>Yes</td>
+                            <td>I built the first version of the Team page using interactive member cards and started
+                                writing the inclusive learning content for my individual content page.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>22 Feb 2026, 8:00 pm</td>
+                            <td>Online</td>
+                            <td>Review progress and fix issues</td>
+                            <td>Yes</td>
+                            <td>I refined the team card hover/focus behaviour, improved the feedback form layout, and
+                                checked that the programme section, review section, and form all worked together
+                                properly.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5 Mar 2026, 3:00 pm</td>
+                            <td>Online</td>
+                            <td>Test functionality and responsiveness</td>
+                            <td>Yes</td>
+                            <td>I reviewed labels, alt text, keyboard access, and section headings on my pages and fixed
+                                structural issues before final validation.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>23 Mar 2026, 6:30 pm</td>
+                            <td>Face-to-face</td>
+                            <td>Final testing, validation and improvements</td>
+                            <td>Yes</td>
+                            <td>I documented my implementation decisions, wrote the Student 3 page editor content, and
+                                prepared the validation page so screenshots could be added after running the W3C
+                                validator.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- References -->
+            <section id="ref">
+                <h2>References</h2>
+                <ul class="ref">
+                    <li>Duckett, J. (2011) <i>HTML and CSS: Design and Build Websites.</i> Indianapolis: John Wiley
+                        &amp; Sons.</li>
+                    <li>W3C (n.d.) <i>The W3C Markup Validation Service.</i> Available at: <a
+                            href="https://validator.w3.org/" target="_blank"
+                            rel="noopener">https://validator.w3.org/</a> (Accessed: 26 March 2026).</li>
+                    <li>United Nations (n.d.) <i>Sustainable Development Goal 4: Quality Education.</i> Available at: <a
+                            href="https://sdgs.un.org/goals/goal4" target="_blank"
+                            rel="noopener">https://sdgs.un.org/goals/goal4</a> (Accessed: 26 March 2026).</li>
+                    <li>MDN Web Docs (n.d.) <i>HTML: HyperText Markup Language.</i> Available at: <a
+                            href="https://developer.mozilla.org/" target="_blank"
+                            rel="noopener">https://developer.mozilla.org/</a> (Accessed: 26 March 2026).</li>
+                    <li><em>W3Schools</em> (2025) <em>HTML Tutorial</em>. Available at: <a href="https://www.w3schools.com" target="_blank">https://www.w3schools.com</a> (Accessed: 10 March 2026).</li>
+                    <li><em>Google</em> (2025) <em>Google Flow (Image Generation Tool)</em>. Available at: <a href="https://labs.google/" target="_blank">https://labs.google/</a> (Accessed: 10 March 2026).</li>
+                </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li>Student 3
+                    <ul>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="content_ST3.html">Content</a></li>
+                    </ul>
+                </li>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

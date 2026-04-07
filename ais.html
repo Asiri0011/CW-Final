@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AIS - SmartEdu</title>
+    <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+
+    <style>
+        body {
+            background-image: url('/img/ais/bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .intro-section {
+            color: white;
+        }
+
+        .intro-section h2,
+        p {
+            margin: 0;
+        }
+
+        /* GRID LAYOUT */
+        .ais-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        /* CARD STYLE */
+        .ais-card {
+            background: #fff;
+            padding: 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        /* CARD IMAGE */
+        .ais-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* SELECTED STATE */
+        .ais-card.selected {
+            border: 2px solid var(--primary);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* RESULT BOX */
+        .ais-result {
+            margin-top: 30px;
+            padding: 16px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        /* BUTTON STYLE */
+        .ais-result button {
+            margin-right: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/" aria-label="Go to Home">
+                <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                <span class="brand-title">SmartEdu</span>
+            </a>
+            <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'flex'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="/" data-alt="Home">Home</a>
+                <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+                <a class="nav-link active" href="ais.html" data-alt="AIS">AIS</a>
+                <a class="nav-link" href="feedback.html" data-alt="Feedback">Feedback</a>
+                <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+                <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+                <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+                <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'none'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+
+        <section class="topic">
+            <div class="topic-content">
+                <h1>Action Impact Simulator</h1>
+            </div>
+        </section>
+
+        <section class="ais">
+            <div class="intro-section">
+                <h2>Pick your actions</h2>
+                <p>
+                    Choose actions that support quality education and see the impact of your contribution.
+                </p>
+            </div>
+
+            <div class="ais-grid">
+
+                <!-- CARD -->
+                <div class="ais-card" data-points="2">
+                    <img src="/img/ais/1.png" alt="Join a study group">
+                    <h3>Join a Study Group</h3>
+                    <p>Collaborate with classmates to share ideas, solve problems, and support each other’s learning.
+                    </p>
+                    <strong>Impact points: 2</strong>
+                </div>
+
+                <div class="ais-card" data-points="3">
+                    <img src="/img/ais/2.png" alt="Share learning resources">
+                    <h3>Share Learning Resources</h3>
+                    <p>Help others by sharing useful notes, learning materials, and educational tools.</p>
+                    <strong>Impact points: 3</strong>
+                </div>
+
+                <div class="ais-card" data-points="2">
+                    <img src="/img/ais/3.png" alt="Support digital learning">
+                    <h3>Support Digital Learning</h3>
+                    <p>Use digital tools and online platforms to make learning more flexible and accessible.</p>
+                    <strong>Impact points: 2</strong>
+                </div>
+
+                <div class="ais-card" data-points="4">
+                    <img src="/img/ais/4.png" alt="Help a peer learn">
+                    <h3>Help a Peer Learn</h3>
+                    <p>Support a classmate or younger student by explaining lessons or helping with schoolwork.</p>
+                    <strong>Impact points: 4</strong>
+                </div>
+
+                <div class="ais-card" data-points="4">
+                    <img src="/img/ais/5.png" alt="Promote inclusive learning">
+                    <h3>Promote Inclusive Learning</h3>
+                    <p>Encourage equal participation and help create a welcoming learning environment for everyone.</p>
+                    <strong>Impact points: 4</strong>
+                </div>
+
+                <div class="ais-card" data-points="3">
+                    <img src="/img/ais/6.png" alt="Build future skills">
+                    <h3>Build Future Skills</h3>
+                    <p>Develop practical skills like communication, teamwork, and digital literacy for future success.
+                    </p>
+                    <strong>Impact points: 3</strong>
+                </div>
+
+            </div>
+
+            <!-- RESULT -->
+            <div class="ais-result">
+                <p><strong>Selected actions:</strong> <span id="count">0</span></p>
+                <p><strong>Impact score:</strong> <span id="score">0</span></p>
+                <p><strong>Impact level:</strong> <span id="level">Low</span></p>
+                <p id="message">Start selecting actions to see your impact.</p>
+
+                <button class="btn btn-primary" onclick="resetAIS()">Reset</button>
+                <button class="btn" onclick="suggestAction()">Suggest one more action</button>
+            </div>
+
+        </section>
+
+        <p id="btn-top" class="btn-top">
+            <a href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z">
+                    </path>
+                </svg>
+            </a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll(".ais-card");
+
+        let total = 0;
+        let selectedCount = 0;
+
+        /* CLICK HANDLER */
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+
+                const points = parseInt(card.dataset.points);
+
+                if (card.classList.contains("selected")) {
+                    card.classList.remove("selected");
+                    total -= points;
+                    selectedCount--;
+                } else {
+                    card.classList.add("selected");
+                    total += points;
+                    selectedCount++;
+                }
+
+                updateResult();
+            });
+        });
+
+        /* UPDATE RESULT */
+        function updateResult() {
+            document.getElementById("score").textContent = total;
+            document.getElementById("count").textContent = selectedCount;
+
+            let level = "Low";
+            let message = "Start selecting actions to increase your impact.";
+
+            /* THRESHOLDS */
+            if (total >= 12) {
+                level = "High";
+                message = "Excellent commitment! You are making a strong positive impact.";
+                setBackground("high");
+            }
+            else if (total >= 6) {
+                level = "Medium";
+                message = "Good progress! Keep going to improve your impact.";
+                setBackground("medium");
+            }
+            else {
+                level = "Low";
+                message = "A small start - try selecting more actions.";
+                setBackground("low");
+            }
+
+            document.getElementById("level").textContent = level;
+            document.getElementById("message").textContent = message;
+        }
+
+        /* BACKGROUND CHANGE */
+        function setBackground(type) {
+            if (type === "low") {
+                document.body.style.background = "url('/img/ais/low.png') center/cover";
+            }
+            else if (type === "medium") {
+                document.body.style.background = "url('/img/ais/medium.png') center/cover";
+            }
+            else {
+                document.body.style.background = "url('/img/ais/high.png') center/cover";
+            }
+        }
+
+        /* RESET */
+        function resetAIS() {
+            cards.forEach(c => c.classList.remove("selected"));
+            total = 0;
+            selectedCount = 0;
+            updateResult();
+        }
+
+        /* SUGGEST ACTION */
+        function suggestAction() {
+            const unselected = [...cards].filter(c => !c.classList.contains("selected"));
+            if (unselected.length > 0) {
+                unselected[0].click();
+            }
+        }
+    </script>
+</body>
+
+</html>

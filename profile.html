@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Feedback & Programs</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" >
+    <script src="js/global.js"></script>
+
+    <style>
+/* PROFILE BUILDER */
+.profile-builder {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* STEP BUTTONS */
+.steps {
+  margin-top: 10px;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* PROFILE BOX */
+.profile-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f7fbfd;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  animation: fadeIn 0.4s ease;
+}
+
+.profile-box h4 {
+  margin-top: 0;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: #2f6f8e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link active" href="profile.html" data-alt="Profile"
+            >Profile</a
+          >
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>SDG Programs & Community Feedback</h1>
+        </div>
+      </section>
+
+      <section class="profile-builder">
+        <h2>Progressive User Profile</h2>
+
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="startProfile()">Start / Continue Profile</button>
+        <button class="btn btn-secondary" onclick="resetProfile()">Reset Profile</button>
+        </div>
+
+        <p>Completion: <span id="progressText">0%</span></p>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+
+        <div class="steps btn-group">
+          <button class="btn btn-primary" onclick="step1()">Step 1: Basics</button>
+          <button class="btn btn-primary" onclick="step2()">Step 2: Interests</button>
+          <button class="btn btn-primary" onclick="step3()">Step 3: Actions</button>
+        </div>
+
+        <h3>Your Profile</h3>
+
+        <div id="profileOutput">
+          <div id="basicSection" class="profile-box" hidden>
+            <h4>Step 1: Basics</h4>
+            <p>Name: <span id="name"></span></p>
+            <p>Username: <span id="username"></span></p>
+            <p>Location: <span id="location"></span></p>
+          </div>
+
+          <div id="interestSection" class="profile-box" hidden>
+            <h4>Step 2: Interests</h4>
+            <p>SDG Interest: <span id="sdg"></span></p>
+            <p>Content Preference: <span id="content"></span></p>
+            <p>Weekly Time: <span id="time"></span></p>
+          </div>
+
+          <div id="actionSection" class="profile-box" hidden>
+            <h4>Step 3: Actions</h4>
+            <p>Goal: <span id="goal"></span></p>
+            <p>Commitment: <span id="commitment"></span></p>
+            <p>Motivation: <span id="motivation"></span></p>
+          </div>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      /* DATA STORAGE */
+      let profile = {
+        name: "",
+        username: "",
+        location: "",
+        sdg: "",
+        content: "",
+        time: "",
+        goal: "",
+        commitment: "",
+        motivation: "",
+      };
+
+      /* START */
+      function startProfile() {
+        step1();
+      }
+
+      /* STEP 1 */
+      function step1() {
+        profile.name = prompt("Enter your name:", profile.name) || profile.name;
+        profile.username =
+          prompt("Enter username:", profile.username) || profile.username;
+        profile.location =
+          prompt("Enter your location:", profile.location) || profile.location;
+
+        updateProfile();
+      }
+
+      /* STEP 2 */
+      function step2() {
+        profile.sdg =
+          prompt("Which SDG interests you?", profile.sdg) || profile.sdg;
+        profile.content =
+          prompt("Preferred content (video/articles)?", profile.content) ||
+          profile.content;
+        profile.time =
+          prompt("Weekly time commitment?", profile.time) || profile.time;
+
+        updateProfile();
+      }
+
+      /* STEP 3 */
+      function step3() {
+        profile.goal =
+          prompt("Your sustainability goal?", profile.goal) || profile.goal;
+        profile.commitment =
+          prompt("What will you commit to?", profile.commitment) ||
+          profile.commitment;
+        profile.motivation =
+          prompt("What motivates you?", profile.motivation) ||
+          profile.motivation;
+
+        updateProfile();
+      }
+
+      /* UPDATE UI */
+      function updateProfile() {
+        /* STEP 1 DISPLAY */
+        if (profile.name || profile.username || profile.location) {
+          document.getElementById("basicSection").hidden = false;
+          document.getElementById("name").textContent = profile.name;
+          document.getElementById("username").textContent = profile.username;
+          document.getElementById("location").textContent = profile.location;
+        }
+
+        /* STEP 2 DISPLAY */
+        if (profile.sdg || profile.content || profile.time) {
+          document.getElementById("interestSection").hidden = false;
+          document.getElementById("sdg").textContent = profile.sdg;
+          document.getElementById("content").textContent = profile.content;
+          document.getElementById("time").textContent = profile.time;
+        }
+
+        /* STEP 3 DISPLAY */
+        if (profile.goal || profile.commitment || profile.motivation) {
+          document.getElementById("actionSection").hidden = false;
+          document.getElementById("goal").textContent = profile.goal;
+          document.getElementById("commitment").textContent =
+            profile.commitment;
+          document.getElementById("motivation").textContent =
+            profile.motivation;
+        }
+
+        updateProgress();
+      }
+
+      /* PROGRESS CALCULATION */
+      function updateProgress() {
+        let filled = Object.values(profile).filter((v) => v !== "").length;
+        let total = Object.keys(profile).length;
+
+        let percent = Math.round((filled / total) * 100);
+
+        document.getElementById("progressText").textContent = percent + "%";
+        document.getElementById("progressFill").style.width = percent + "%";
+      }
+
+      /* RESET */
+      function resetProfile() {
+        profile = {};
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

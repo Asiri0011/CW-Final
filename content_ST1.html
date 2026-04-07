@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+    <style>
+      /* On This Page Navigation */
+      .content-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .content-nav ul li a {
+        display: inline-block;
+        padding: 10px 18px;
+        background: #83858b;
+        color: #1f2937;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+      }
+
+      .content-nav ul li a:hover {
+        background: #b30000;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      /* Content Images */
+      .content-image {
+        width: 100%;
+        max-height: 430px;
+        object-fit: cover;
+        border-radius: 22px;
+        margin: 12px 0 28px;
+        display: block;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .content-nav ul {
+          flex-direction: column;
+        }
+
+        .content-nav ul li a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .content-image {
+          border-radius: 18px;
+          max-height: 260px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo">
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="content-page">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>Breaking Barriers to Education</h1>
+        </div>
+      </section>
+
+
+      <div class="container">
+        <nav class="content-nav" aria-label="Page sections">
+          <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#challenges">Main Challenges</a></li>
+            <li><a href="#importance">Why It Matters</a></li>
+            <li><a href="#solutions">Possible Solutions</a></li>
+            <li><a href="#action">Student Action</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <section id="intro" class="content-section">
+        <div class="container">
+          <h2>Introduction</h2>
+          <img
+            src="img/content/st1/intro.png"
+            alt="Students in a learning environment representing access to education"
+            class="content-image"
+          >
+          <p>
+            Education is one of the most powerful tools for personal growth,
+            social mobility, and long-term development. It helps people build
+            knowledge, improve their confidence, and prepare for future careers
+            and responsibilities. However, not everyone has the same opportunity
+            to learn in a safe, supportive, and effective environment.
+          </p>
+          <p>
+            Barriers to education continue to affect millions of students around
+            the world. These barriers can appear in different forms, including
+            poverty, lack of school resources, digital inequality,
+            discrimination, and limited access to quality learning spaces. For
+            many students, education is not simply about attending school - it
+            is also about whether they have the support, tools, and
+            opportunities needed to succeed.
+          </p>
+          <p>
+            This issue is closely connected to Sustainable Development Goal 4:
+            Quality Education, which promotes inclusive and equitable learning
+            opportunities for all. Understanding these barriers is important
+            because it helps students, communities, and institutions recognise
+            what prevents progress and what actions can be taken to improve
+            access to education.
+          </p>
+        </div>
+      </section>
+
+      <section id="challenges" class="content-section">
+        <div class="container">
+          <h2>Main Challenges Students Face</h2>
+          <img
+            src="img/content/st1/challenges.png"
+            alt="A student facing challenges related to access and learning resources"
+            class="content-image"
+          >
+          <p>
+            Many students face difficulties that make learning harder than it
+            should be. One major barrier is financial inequality. Some families
+            may struggle to afford school supplies, internet access,
+            transportation, tuition, or learning devices. Even when education is
+            available, hidden costs can still create pressure and reduce
+            participation.
+          </p>
+          <p>
+            Another common barrier is the lack of educational resources. In some
+            schools or communities, students may not have enough books, updated
+            materials, computers, or qualified teachers. This can reduce the
+            quality of learning and make it difficult for students to reach
+            their full potential.
+          </p>
+          <p>
+            The digital divide is also an important issue in modern education.
+            Technology has become a major part of learning, especially after the
+            growth of online classes and digital platforms. However, not all
+            students have reliable internet, laptops, or quiet study spaces at
+            home. This creates unfair differences in learning opportunities.
+          </p>
+          <p>
+            Some students also face social and personal barriers, such as
+            language difficulties, disability-related access issues,
+            discrimination, low confidence, or mental health challenges. These
+            factors can affect motivation, attendance, classroom participation,
+            and overall academic performance.
+          </p>
+        </div>
+      </section>
+
+      <section id="importance" class="content-section">
+        <div class="container">
+          <h2>Why Barriers to Education Matter</h2>
+          <p>
+            Barriers to education do not only affect individual students - they
+            also affect communities and society as a whole. When students are
+            unable to access quality learning, the result is often reduced
+            opportunity, lower confidence, and fewer chances for long-term
+            success.
+          </p>
+          <p>
+            Education plays a key role in helping people develop skills, think
+            critically, and make informed decisions. It also supports
+            employment, health awareness, communication, and social
+            participation. If barriers remain in place, inequality becomes
+            stronger and opportunities become less fair.
+          </p>
+          <p>
+            For young people especially, missing out on education can have a
+            lasting impact. Students who are left behind may struggle to gain
+            the skills needed for future careers or higher education. This can
+            create a cycle where disadvantage continues across generations.
+          </p>
+          <p>
+            That is why improving access to education is not only a school issue
+            - it is a development issue. Supporting better education means
+            supporting stronger communities, better futures, and more equal
+            opportunities for everyone.
+          </p>
+        </div>
+      </section>
+
+      <section id="solutions" class="content-section">
+        <div class="container">
+          <h2>Possible Solutions</h2>
+          <img
+            src="img/content/st1/solutions.png"
+            alt="Students and teachers working together in a supportive learning space"
+            class="content-image"
+          >
+          <p>
+            Although the challenges are serious, there are many practical ways
+            to reduce barriers to education. One of the most important steps is
+            improving equal access to learning resources. This includes
+            providing affordable internet, digital devices, books, and learning
+            materials to students who need them.
+          </p>
+          <p>
+            Schools and universities can also help by creating more inclusive
+            learning environments. This means supporting different learning
+            needs, improving accessibility, offering flexible teaching methods,
+            and ensuring students feel respected and encouraged.
+          </p>
+          <p>
+            Community support also makes a big difference. Local organisations,
+            volunteers, peer mentors, and educational programmes can help
+            students who need extra guidance or academic support. Sometimes
+            small actions - such as tutoring, study groups, or sharing resources
+            - can create a strong positive impact.
+          </p>
+          <p>
+            Teachers and institutions can further reduce barriers by using more
+            student-friendly learning approaches, such as interactive teaching,
+            practical examples, and supportive feedback. When students feel
+            engaged and included, they are more likely to stay motivated and
+            succeed.
+          </p>
+        </div>
+      </section>
+
+      <section id="action" class="content-section">
+        <div class="container">
+          <h2>What Students Can Do</h2>
+          <img
+            src="img/content/st1/action.png"
+            alt="Students collaborating and supporting each other through learning"
+            class="content-image"
+          >
+          <p>
+            Students themselves can also contribute to improving education, even
+            through simple everyday actions. One helpful step is supporting
+            classmates through peer learning. Sharing notes, explaining
+            difficult topics, or studying together can help reduce gaps in
+            understanding.
+          </p>
+          <p>
+            Students can also promote digital inclusion by sharing useful free
+            resources, educational tools, and learning platforms. Helping others
+            find reliable information can make learning more accessible and less
+            stressful.
+          </p>
+          <p>
+            Another important action is encouraging a more inclusive learning
+            culture. This includes being respectful, supportive, and open to
+            different learning styles and personal experiences. Small positive
+            actions in classrooms and study groups can help others feel more
+            confident and involved.
+          </p>
+          <p>
+            Students can also raise awareness through discussions, projects, and
+            campaigns that focus on equal learning opportunities. When students
+            actively care about educational access, they help build a stronger
+            and more supportive academic community.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion" class="content-section">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <p>
+            Barriers to education remain one of the biggest challenges to
+            achieving true quality learning for all. Financial pressure, lack of
+            resources, technology gaps, and social inequality can all prevent
+            students from reaching their full potential.
+          </p>
+          <p>
+            However, these challenges are not impossible to overcome. With
+            better support, inclusive systems, stronger communities, and
+            student-led action, education can become more accessible and more
+            meaningful for everyone.
+          </p>
+          <p>
+            Improving education is not only about solving problems inside the
+            classroom - it is about creating a future where every learner has
+            the chance to grow, succeed, and contribute to society. That is why
+            understanding and reducing barriers to education is such an
+            important step toward achieving Quality Education for All.
+          </p>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

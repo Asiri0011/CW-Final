@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/global.css">
+  <script src="js/global.js"></script>
+
+  <style>
+    /* Hero */
+    #hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding: 80px 20px;
+      background-color: #420002;
+      background-image: url(/img/hero/hero-1.png);
+      background-size: cover;
+    }
+
+    #hero .hero-content {
+      width: 1100px;
+      text-align: left;
+      z-index: 1;
+    }
+
+    /* 1) Layout grid for mission cards */
+    .mission-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 18px;
+    }
+
+    .mission-grid .card {
+      grid-column: span 12;
+    }
+
+    @media (min-width: 850px) {
+      .mission-grid .card {
+        grid-column: span 4;
+      }
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      color: #fff;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #fff;
+    }
+
+    .graphics {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+
+    .circle-1 {
+      border: dashed 6px #fff;
+      position: absolute;
+      width: 62vw;
+      height: 62vw;
+      border-radius: 100%;
+      animation: spin 300s linear infinite;
+      left: 39%;
+      top: 90px;
+      opacity: 0.15;
+    }
+
+    .circle-2 {
+      border: dashed 5px #fff;
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 100%;
+      animation: spin 100s linear infinite;
+      left: -350px;
+      top: 50px;
+      opacity: 0.25;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 3) Home interactive gallery tiles */
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .tile {
+      grid-column: span 12;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+    }
+
+    @media (min-width: 700px) {
+      .tile {
+        grid-column: span 6;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .tile {
+        grid-column: span 3;
+      }
+    }
+
+    /* 4) Tile image presentation */
+    .tile img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+    }
+
+    .tile .tile-label {
+      position: absolute;
+      inset: auto 10px 10px 10px;
+      background: rgba(0, 0, 0, 0.45);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    .tile:hover {
+      transform: translateY(-3px);
+      border-color: rgba(47, 111, 142, 0.65);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    .hero-big-title {
+      font-size: 65pt;
+      font-family: "Inter Tight";
+      font-weight: bold;
+      line-height: 1.1;
+      padding-bottom: 50px;
+    }
+
+    .text-yellow {
+      color: yellow;
+    }
+
+    /* 6) Small highlight list text spacing */
+    .highlights {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .highlights li {
+      margin: 6px 0;
+    }
+
+    /* Mission Cards */
+    #mission-cards {
+      margin-top: 100vh;
+    }
+  </style>
+</head>
+
+<body class="page-home">
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Go to Home">
+        <img src="/img/logo/logo.png" alt="SmartEdu logo" >
+        <span class="brand-title">SmartEdu</span>
+      </a>
+      <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'flex'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="/" data-alt="Home">Home</a>
+        <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+        <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+        <a class="nav-link" href="feedback.html" data-alt="Feedback">Feedback</a>
+        <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+        <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+        <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+        <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'none'">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container site-main">
+    <section id="hero" class="hero">
+      <div class="graphics">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-big-title">
+          Smart Edu <br>
+          <span class="text-yellow">#For Better</span> <br>
+          Future
+        </p>
+        <h1>Quality Education for All</h1>
+        <p>
+          Explore
+          <strong>practical ideas, student actions, and meaningful ways</strong><br>
+          to support better learning opportunities for everyone.
+        </p>
+        <div class="mt-20 btn-group">
+          <a href="tel:+94112345678" class="btn btn-dark-primary">Call Now</a>
+          <a href="mailto:contact@iit.ac.lk" class="btn btn-dark-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission-cards">
+          <h2>Mission Cards</h2>
+      <div class="mission-grid">
+        <article class="card">
+          <h2>Why Quality Education Matters</h2>
+          <img src="img/home/mission/1.png" alt="Students discussing real-world SDG actions in a local community" >
+          <p>
+            Quality education gives people the knowledge, confidence, and
+            opportunities they need to improve their lives. It helps reduce
+            inequality, supports personal growth, and creates stronger
+            communities.
+          </p>
+          <ul class="highlights">
+            <li>Builds skills for future careers</li>
+            <li>Reduces social and economic inequality</li>
+            <li>Supports lifelong learning and confidence</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>How Students Can Take Action</h2>
+          <img src="img/home/mission/2.png" alt="Volunteers working together on sustainability initiatives" >
+          <p>
+            Students can support quality education through simple everyday
+            actions. Sharing knowledge, helping peers, and using learning
+            resources wisely can make education more inclusive and effective.
+          </p>
+          <ul class="highlights">
+            <li>Join peer study groups</li>
+            <li>Support digital learning access</li>
+            <li>Share useful educational resources</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>From Learning to Real Impact</h2>
+          <img src="img/home/mission/3.png" alt="A visual timeline showing actions leading to measurable outcomes" >
+          <p>
+            Education becomes powerful when learning leads to action. Small
+            steps taken by students and communities can create meaningful
+            change and contribute to a more sustainable future.
+          </p>
+          <ul class="highlights">
+            <li>Turn awareness into action</li>
+            <li>Measure everyday impact</li>
+            <li>Build positive habits for change</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Interactive gallery linking to content pages" style="margin-top: 26px">
+      <h2>Explore Key Topics</h2>
+      <p class="small">
+        Explore the key areas of Quality Education and discover how each topic
+        shapes a better future.
+      </p>
+
+      <div class="tile-grid">
+        <a class="tile" href="content_ST1.html">
+          <img src="img/home/tiles/1.png" alt="Barriers to Education" >
+          <span class="tile-label">Barriers to Education</span>
+        </a>
+
+        <a class="tile" href="content_ST2.html">
+          <img src="img/home/tiles/2.png" alt="Digital Learning" >
+          <span class="tile-label">Digital Learning</span>
+        </a>
+
+        <a class="tile" href="content_ST3.html">
+          <img src="img/home/tiles/3.png" alt="Inclusive Learning" >
+          <span class="tile-label">Inclusive Learning</span>
+        </a>
+
+        <a class="tile" href="content_ST4.html">
+          <img src="img/home/tiles/4.png" alt="Future Skills" >
+          <span class="tile-label">Future Skills</span>
+        </a>
+      </div>
+    </section>
+
+    <p id="btn-top" class="btn-top">
+      <a href="#top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256">
+          <path
+            d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z">
+          </path>
+        </svg>
+      </a>
+    </p>
+  </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

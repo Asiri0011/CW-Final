@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content - SmartEdu</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+    <style>
+      /* On This Page Navigation */
+      .content-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .content-nav ul li a {
+        display: inline-block;
+        padding: 10px 18px;
+        background: #83858b;
+        color: #1f2937;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+      }
+
+      .content-nav ul li a:hover {
+        background: #b30000;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      /* Content Images */
+      .content-image {
+        width: 100%;
+        max-height: 430px;
+        object-fit: cover;
+        border-radius: 22px;
+        margin: 12px 0 28px;
+        display: block;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .content-nav ul {
+          flex-direction: column;
+        }
+
+        .content-nav ul li a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .content-image {
+          border-radius: 18px;
+          max-height: 260px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Go to Home">
+          <img src="/img/logo/logo.png" alt="SmartEdu logo">
+          <span class="brand-title">SmartEdu</span>
+        </a>
+        <button
+          class="menu-button"
+          onclick="document.getElementById('site-nav').style.display = 'flex'"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/" data-alt="Home">Home</a>
+          <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+          <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+          <a class="nav-link" href="feedback.html" data-alt="Feedback"
+            >Feedback</a
+          >
+          <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+          <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+          <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+          <button
+            class="menu-button"
+            onclick="document.getElementById('site-nav').style.display = 'none'"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="content-page">
+      <section class="topic">
+        <div class="topic-content">
+          <h1>The Importance of Inclusive Learning</h1>
+        </div>
+      </section>
+
+      <div class="container">
+        <nav class="content-nav" aria-label="Page sections">
+          <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#tools">Supportive Tools</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#future">Future</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section id="intro" class="content-section">
+        <div class="container">
+          <h2>Introduction</h2>
+          <img
+            src="img/content/st3/intro.png"
+            alt="Students from different backgrounds learning together in an inclusive classroom"
+            class="content-image"
+          >
+          <p>
+            Inclusive learning is an approach to education that aims to ensure
+            every student has a fair opportunity to learn, participate, and
+            succeed. It recognises that learners have different needs,
+            abilities, backgrounds, and experiences, and it encourages teaching
+            methods that support everyone rather than only a small group of
+            students.
+          </p>
+          <p>
+            In a truly inclusive learning environment, students feel respected,
+            valued, and supported. This includes not only access to classrooms
+            and materials, but also emotional support, equal treatment, and
+            teaching approaches that help all learners stay engaged. Inclusive
+            learning is important because education should not exclude students
+            based on ability, background, language, or personal challenges.
+          </p>
+          <p>
+            This idea is strongly connected to Sustainable Development Goal 4:
+            Quality Education, which promotes inclusive and equitable education
+            for all. By creating learning spaces where everyone can participate,
+            schools and universities can help build a more equal and supportive
+            future.
+          </p>
+        </div>
+      </section>
+
+      <section id="tools" class="content-section">
+        <div class="container">
+          <h2>Supportive Learning Tools</h2>
+          <img
+            src="img/content/st3/tools.png"
+            alt="Students using supportive learning tools such as laptops, captions, and accessible resources"
+            class="content-image"
+          >
+          <p>
+            There are many tools and strategies that can help make education
+            more inclusive. These include assistive technologies, captioned
+            videos, screen readers, speech-to-text tools, visual learning
+            resources, and flexible teaching methods. These tools support
+            students with different learning needs and help remove barriers that
+            might otherwise affect participation.
+          </p>
+          <p>
+            Teachers can also create more inclusive lessons by using a variety
+            of teaching methods. Some students learn better through reading,
+            while others may prefer visuals, discussion, practice, or group
+            work. Providing content in different formats gives more students the
+            chance to understand and engage with the material.
+          </p>
+          <p>
+            Peer support is another important part of inclusive learning. Group
+            activities, class discussions, and collaborative tasks can help
+            students learn from one another and feel more connected. When
+            students support each other, the learning environment becomes more
+            welcoming and less intimidating.
+          </p>
+        </div>
+      </section>
+
+      <section id="benefits" class="content-section">
+        <div class="container">
+          <h2>Benefits of Inclusive Learning</h2>
+          <p>
+            One of the biggest benefits of inclusive learning is that it creates
+            a stronger sense of belonging. Students are more likely to
+            participate, ask questions, and build confidence when they feel
+            accepted and supported in the classroom.
+          </p>
+          <p>
+            Inclusive learning also helps improve fairness in education. It
+            gives more students access to the support and resources they need,
+            which can reduce inequality and improve academic performance.
+            Instead of expecting every student to learn in the same way,
+            inclusive education recognises that different learners may need
+            different types of help.
+          </p>
+          <p>
+            Another important benefit is that inclusive classrooms often create
+            stronger social understanding. Students learn to work with people
+            from different backgrounds, abilities, and perspectives. This not
+            only improves classroom relationships but also prepares students for
+            diverse workplaces and communities in the future.
+          </p>
+          <p>
+            Overall, inclusive learning creates a more positive educational
+            experience. It supports both academic development and personal
+            growth, making education more meaningful and more effective for a
+            wider range of learners.
+          </p>
+        </div>
+      </section>
+
+      <section id="challenges" class="content-section">
+        <div class="container">
+          <h2>Challenges to Inclusion</h2>
+          <img
+            src="img/content/st3/challenges.png"
+            alt="A student facing barriers to inclusion in an educational environment"
+            class="content-image"
+          >
+          <p>
+            Although inclusive learning is an important goal, there are still
+            many challenges that can prevent it from being fully achieved. One
+            common issue is the lack of resources. Some schools and institutions
+            may not have enough accessible materials, trained staff, or support
+            systems to meet the needs of all learners.
+          </p>
+          <p>
+            Another challenge is limited awareness or understanding. Some people
+            may not fully recognise the importance of accessibility, different
+            learning styles, or the barriers faced by certain students. This can
+            lead to exclusion, misunderstanding, or teaching methods that do not
+            support everyone equally.
+          </p>
+          <p>
+            Students may also face social barriers such as discrimination,
+            stereotyping, or lack of confidence. If students feel judged,
+            ignored, or unsupported, they may become less engaged in learning
+            and less likely to participate actively.
+          </p>
+          <p>
+            These challenges show that inclusion is not only about physical
+            access - it is also about attitudes, support, and creating an
+            environment where every student feels that they belong.
+          </p>
+        </div>
+      </section>
+
+      <section id="future" class="content-section">
+        <div class="container">
+          <h2>The Future of Inclusive Education</h2>
+          <img
+            src="img/content/st3/future.png"
+            alt="Students learning in a future-focused inclusive educational setting"
+            class="content-image"
+          >
+          <p>
+            The future of education should be more inclusive, flexible, and
+            accessible for all learners. As technology and teaching methods
+            continue to develop, there is an opportunity to build systems that
+            better support students with different needs and backgrounds.
+          </p>
+          <p>
+            Schools and universities can improve inclusion by using accessible
+            digital tools, offering more personalised learning experiences, and
+            creating spaces where students feel safe and supported. This means
+            designing education in a way that works for a wide range of
+            learners, rather than expecting everyone to fit into one standard
+            model.
+          </p>
+          <p>
+            In the future, inclusive education should also involve stronger
+            student voice and participation. Students themselves can help shape
+            better learning environments by sharing feedback, supporting their
+            peers, and promoting a culture of respect and equality.
+          </p>
+          <p>
+            If education systems continue to move toward inclusion, they will
+            become more effective, more humane, and more capable of supporting
+            long-term personal and social development.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion" class="content-section">
+        <div class="container">
+          <h2>Conclusion</h2>
+          <p>
+            Inclusive learning is essential for building fair and supportive
+            education systems. It ensures that all students, regardless of their
+            background or ability, have the opportunity to learn, participate,
+            and succeed.
+          </p>
+          <p>
+            While there are still challenges to overcome, inclusive learning
+            offers important benefits such as confidence, belonging, fairness,
+            and stronger educational outcomes. It also helps create classrooms
+            and communities where diversity is respected and valued.
+          </p>
+          <p>
+            By promoting inclusive learning, schools, students, and communities
+            can take meaningful steps toward achieving Sustainable Development
+            Goal 4 and creating a better future through education for all.
+          </p>
+        </div>
+      </section>
+
+      <p id="btn-top" class="btn-top">
+        <a href="#top" aria-label="Go to top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+            ></path>
+          </svg>
+        </a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

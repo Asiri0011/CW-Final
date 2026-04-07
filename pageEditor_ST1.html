@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Shanuka Pramuditha</title>
+  <link rel="icon" href="/img/logo/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/" aria-label="Go to Home">
+                <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                <span class="brand-title">SmartEdu</span>
+            </a>
+            <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'flex'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="/" data-alt="Home">Home</a>
+                <a class="nav-link" href="gallery.html" data-alt="Gallery">Gallery</a>
+                <a class="nav-link" href="ais.html" data-alt="AIS">AIS</a>
+                <a class="nav-link" href="feedback.html" data-alt="Feedback">Feedback</a>
+                <a class="nav-link" href="team.html" data-alt="Team">Team</a>
+                <a class="nav-link" href="profile.html" data-alt="Profile">Profile</a>
+                <a class="nav-link" href="sitemap.html" data-alt="Sitemap">Sitemap</a>
+                <button class="menu-button" onclick="document.getElementById('site-nav').style.display = 'none'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="stud">
+        <h2>Shanuka Pramuditha | Team G5 | Home Page / Gallery Page</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="home">Home page</h2>
+                    <h3>Technical Description</h3>
+                    <p>
+                        I developed the Home Page using the shared HTML template created for the team website. 
+                        The page uses semantic HTML elements such as <code>header</code>, <code>nav</code>, 
+                        <code>main</code>, <code>section</code>, and <code>footer</code> to create a clear and 
+                        accessible structure. The main content was organised using card-based sections to present 
+                        the website’s purpose, mission, and key actions related to our chosen SDG.
+                    </p>
+
+                    <p>
+                        I used the shared global CSS file to maintain consistency across the website, especially 
+                        for typography, spacing, colours, buttons, and navigation styling. In addition, I used 
+                        embedded CSS on the Home Page to style page-specific features such as the interactive 
+                        gallery, hover effects, and section emphasis. The interactive gallery was designed to link 
+                        users directly to the four individual content pages, helping users navigate the website more easily.
+                    </p>
+
+                    <p>
+                        I also implemented the active navigation state so that the Home link is visually highlighted 
+                        when the user is on this page. This improves usability and helps users understand where they 
+                        are within the site structure.
+                    </p>
+                    <h3>Accessibility</h3>
+                        <p>
+                            Accessibility was considered throughout the Home Page design. All images include meaningful 
+                            alternative text so screen readers can describe visual content. I used a logical heading 
+                            structure to support readability and navigation, and ensured that text and background colours 
+                            had sufficient contrast. Navigation links were labelled clearly, and hover states were used 
+                            to provide visual feedback for interactive elements.
+                        </p>
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html#homeVal">View Validation Report</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="/">View Home Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="gallery">Gallery Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>
+                            I developed the Gallery Page to provide an interactive visual experience related to the 
+                            website theme. The page was structured using the shared template and styled with the global 
+                            CSS for consistency. I used a gallery layout with thumbnail images and labels to present 
+                            visually relevant SDG-related content.
+                        </p>
+
+                        <p>
+                            JavaScript was used to control the gallery interactivity. Event listeners were added so that 
+                            when a user clicks on a thumbnail, an extended view is displayed with a larger image and 
+                            additional descriptive content. I also included JavaScript functionality to allow users to 
+                            close the expanded view. This ensured that the gallery interaction met the coursework 
+                            requirement of using JavaScript rather than CSS-only techniques.
+                        </p>
+
+                        <p>
+                            I also added page-specific styling to improve the visual identity of the gallery, including 
+                            hover feedback, spacing, image presentation, and transitions. This helped create a more 
+                            engaging and user-friendly page.
+                        </p>
+                    <h3>Accessibility</h3>
+                        <p>
+                            To improve accessibility, all gallery images include descriptive alt text. Interactive items 
+                            were made visually clear through hover and focus styling, and the layout was designed with 
+                            readable spacing and consistent heading structure. The page was also structured semantically 
+                            to improve screen reader compatibility and general usability.
+                        </p>
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html#galleryVal">View Validation Report</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="gallery.html">View Gallery Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>
+                            I created my individual Content Page using the shared template and global CSS. The page was 
+                            structured using semantic HTML headings and multiple clearly defined sections to present 
+                            detailed information related to the chosen SDG topic. I used one main <code>h1</code> heading 
+                            followed by <code>h2</code> and <code>h3</code> headings to maintain a logical content hierarchy.
+                        </p>
+
+                        <p>
+                            To improve navigation within the page, I added an internal navigation menu at the top using 
+                            anchor links that jump to each main section of the content. Each section was assigned a unique 
+                            <code>id</code> so users can move quickly between topics. I also implemented a fixed “Go to Top” 
+                            button using HTML and CSS only, which remains visible while scrolling and allows users to return 
+                            to the top of the page easily.
+                        </p>
+
+                        <p>
+                            The page includes multiple relevant images to support the content, and CSS was used to style 
+                            these images with spacing, sizing, and visual emphasis. This made the page more engaging while 
+                            keeping it readable and well-organised.
+                        </p>
+                    <h3>Accessibility</h3>
+                        <p>
+                            Accessibility was addressed by using meaningful alt text for all images, a clear heading 
+                            hierarchy, readable font sizes, and sufficient colour contrast. The internal navigation links 
+                            were labelled clearly so users can move through the page more easily. The page structure also 
+                            supports accessibility through semantic HTML and consistent content organisation.
+                        </p>
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html#contentVal">View Validation Report</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST1.html">View Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>
+                        One challenge I faced was maintaining consistency between the shared template and the 
+                        individual page requirements. Since the Home Page and Gallery Page needed page-specific 
+                        features, I had to carefully separate reusable global CSS from page-specific styling. 
+                        This helped avoid design conflicts across the team website.
+                    </p>
+
+                    <p>
+                        Another challenge was implementing interactive gallery behaviour using JavaScript in a way 
+                        that was both functional and user-friendly. I needed to ensure that clicking thumbnails 
+                        displayed the correct extended content while keeping the code organised and easy to update.
+                    </p>
+
+                    <p>
+                        Through this process, I improved my understanding of semantic HTML, CSS organisation, 
+                        internal linking, reusable page structures, and JavaScript-based interactivity. I also 
+                        learned the importance of accessibility and validation in front-end web development.
+                    </p>
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>
+                        The pages I created were designed to comply with JANET regulations for web publication. 
+                        I ensured that the content is appropriate for educational use, respectful, and free from 
+                        offensive or harmful material. Any externally sourced images or resources used in my pages 
+                        were selected from suitable royalty-free or publicly accessible sources and are properly 
+                        referenced in the References section.
+                    </p>
+
+                    <p>
+                        I also considered responsible web publishing practices by ensuring the website content is 
+                        clear, relevant, and suitable for a public academic audience. Accessibility features such 
+                        as alternative text, readable structure, and clear navigation were also included to support 
+                        inclusive design and responsible online communication.
+                    </p>
+                    
+            </section>
+
+            <section>
+                <h2 id="group"> Group Meetings and Individual Contribution Log</h2>
+                    <p>Include a Group Meetings and Contribution Log that documents your engagement with group work.</p> 
+                    Requirements:
+                        <ul> 
+                            <li>A minimum of six (6) group meetings must be recorded.</li>
+                            <li>Each student must provide their own account of the meetings.</li>
+                            <li>The log must focus on individual contribution, not just group activity.</li>
+                        </ul>
+                        <p>Feel free to follow the example table structure below:</p>
+
+                        <table >
+    
+                            <thead>
+                                <tr>
+                                    <th colspan="6">Group Meetings and Contribution Log</th>
+                                </tr>
+                                <tr>
+                                    <th>Meeting</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Format</th>
+                                    <th>Objective</th>
+                                    <th>Attended</th>
+                                    <th>Your Individual Contribution</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>3 Feb 2026, 2:00 pm</td>
+                                    <td>Face-to-face</td>
+                                    <td>Select SDG and assign pages</td>
+                                    <td>Yes</td>
+                                    <td>I agreed to take responsibility for the Home Page, Gallery Page, and shared template implementation.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2</td>
+                                    <td>8 Feb 2026, 7:30 pm</td>
+                                    <td>Online</td>
+                                    <td>Plan website structure and design</td>
+                                    <td>Yes</td>
+                                    <td>I suggested the layout structure and navigation bar design for consistency across all pages.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>3</td>
+                                    <td>15 Feb 2026, 4:00 pm</td>
+                                    <td>Face-to-face</td>
+                                    <td>Develop shared template and navigation</td>
+                                    <td>Yes</td>
+                                    <td>I developed the shared HTML template and global CSS, including header, footer, and navigation bar.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>4</td>
+                                    <td>22 Feb 2026, 8:00 pm</td>
+                                    <td>Online</td>
+                                    <td>Review progress and fix issues</td>
+                                    <td>Yes</td>
+                                    <td>I reviewed my Home Page and Gallery Page and improved layout, card structure, and styling.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>5</td>
+                                    <td>5 Mar 2026, 3:00 pm</td>
+                                    <td>Online</td>
+                                    <td>Test functionality and responsiveness</td>
+                                    <td>Yes</td>
+                                    <td>I integrated my pages with other team members’ pages and ensured navigation links worked correctly.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>6</td>
+                                    <td>23 Mar 2026, 6:30 pm</td>
+                                    <td>Face-to-face</td>
+                                    <td>Final testing, validation and improvements</td>
+                                    <td>Yes</td>
+                                    <td>I tested responsiveness, fixed layout issues, and ensured validation and accessibility requirements were met.</td>
+                                </tr>
+                        
+                            </tbody>
+                        
+                        </table>
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
+                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                        <li><em>W3Schools</em> (2025) <em>HTML Tutorial</em>. Available at: <a href="https://www.w3schools.com" target="_blank">https://www.w3schools.com</a> (Accessed: 10 March 2026).</li>
+                        <li><em>Google</em> (2025) <em>Google Flow (Image Generation Tool)</em>. Available at: <a href="https://labs.google/" target="_blank">https://labs.google/</a> (Accessed: 10 March 2026).</li>
+                        <li>W3C (n.d.) <i>The W3C Markup Validation Service</i>. Available at: <a href="https://validator.w3.org/" target="_blank" rel="noopener">https://validator.w3.org/</a> (Accessed: 26 March 2026).</li>
+                        <li>United Nations (n.d.) <i>Sustainable Development Goal 4: Quality Education</i>. Available at: <a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener">https://sdgs.un.org/goals/goal4</a> (Accessed: 26 March 2026).</li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+            <ul class="top-level-ul">
+                <li>Student 1</li>
+                <ul>
+                        <li><a href="/">Home page </a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="content_ST1.html">Content</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <a class="brand" href="/" aria-label="Go to Home">
+                    <img src="/img/logo/logo.png" alt="SmartEdu logo">
+                    <span class="brand-title">SmartEdu</span>
+                </a>
+                <p class="footer-note">
+                    Promoting Quality Education through awareness, inclusion, and
+                    meaningful student action.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <strong>Website Pages</strong>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="AIS.html">AIS</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="team.html">Team</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 1</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST1.html">Page Editor</a>
+                    <a href="validation_ST1.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 2</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST2.html">Page Editor</a>
+                    <a href="validation_ST2.html">Validation</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <strong>Student 3</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST3.html">Page Editor</a>
+                    <a href="validation_ST3.html">Validation</a>
+                </div>
+                <br>
+                <strong>Student 4</strong>
+                <div class="footer-links">
+                    <a href="pageEditor_ST4.html">Page Editor</a>
+                    <a href="validation_ST4.html">Validation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
